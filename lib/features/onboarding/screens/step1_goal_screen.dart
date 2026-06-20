@@ -28,7 +28,14 @@ class Step1GoalScreen extends StatelessWidget {
               const SizedBox(height: 16),
               OnboardingTopBar(
                 stepText: l10n.step_1_of_14,
-                onSkip: () {},
+                onSkip: () {
+                  Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Step2AgeScreen(), // 👈 غير HomeScreen باسم صفحتك
+      ),
+    );
+                },
               ),
               const SizedBox(height: 32),
 

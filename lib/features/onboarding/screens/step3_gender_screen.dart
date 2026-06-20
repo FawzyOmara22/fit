@@ -26,7 +26,12 @@ class Step3GenderScreen extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(24, 16, 24, 0),
               child: OnboardingTopBar(
                 stepText: l10n.step_3_of_14,
-                onSkip: () {},
+                onSkip: () {Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Step4WeightScreen(), // 👈 غير HomeScreen باسم صفحتك
+      ),
+    );},
               ),
             ),
 

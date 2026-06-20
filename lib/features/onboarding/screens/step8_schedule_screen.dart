@@ -23,7 +23,14 @@ class Step8ScheduleScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(24, 16, 24, 0),
-              child: OnboardingTopBar(stepText: l10n.step_8_of_14, onSkip: () {}),
+              child: OnboardingTopBar(stepText: l10n.step_8_of_14, onSkip: () {
+                 Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Step9EquipmentScreen(), // 👈 غير HomeScreen باسم صفحتك
+      ),
+    );
+              }),
             ),
 
             Expanded(

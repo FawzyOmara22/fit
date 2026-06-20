@@ -52,7 +52,14 @@ class _Step4WeightScreenState extends State<Step4WeightScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 16),
-              OnboardingTopBar(stepText: l10n.step_4_of_14, onSkip: () {}),
+              OnboardingTopBar(stepText: l10n.step_4_of_14, onSkip: () {
+                Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Step5HeightScreen(), // 👈 غير HomeScreen باسم صفحتك
+      ),
+    );
+              }),
               const SizedBox(height: 32),
               
               Align(alignment: AlignmentDirectional.centerStart, child: Text(l10n.biometrics, style: AppTextStyles.label10Blue.copyWith(letterSpacing: 1.50))),

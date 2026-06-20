@@ -36,7 +36,14 @@ class Step9EquipmentScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(24, 16, 24, 0),
-              child: OnboardingTopBar(stepText: l10n.step_9_of_14, onSkip: () {}),
+              child: OnboardingTopBar(stepText: l10n.step_9_of_14, onSkip: () {
+                 Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Step10UnitsScreen(), // 👈 غير HomeScreen باسم صفحتك
+      ),
+    );
+              }),
             ),
 
             Expanded(

@@ -5,6 +5,14 @@ import 'package:kinetic/features/plan/widget/day_indicator.dart';
 import 'package:kinetic/features/plan/widget/progress_bar_item.dart';
 import 'package:kinetic/features/plan/widget/stat_card.dart';
 
+// 👇 استدعاء الثيم والألوان
+import '../../../../core/theme/app_colors.dart';
+import '../../../../core/theme/app_text_style.dart';
+
+// 👇 استدعاء زرار التدرج اللوني وصفحة تسجيل الدخول
+import 'package:kinetic/core/shared_widgets/custom_gradient_button.dart'; 
+import 'package:kinetic/features/auth/screens/login_screen.dart'; // تأكد من مسار صفحة اللوجين
+
 class PlanScreen extends StatelessWidget {
   const PlanScreen({super.key});
 
@@ -13,7 +21,7 @@ class PlanScreen extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF8F9FB),
+      backgroundColor: AppColors.scaffoldBackground,
       body: SafeArea(
         child: Column(
           children: [
@@ -23,16 +31,16 @@ class PlanScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Icon(Icons.menu, color: Color(0xFF0058BB), size: 28),
+                  const Icon(Icons.menu, color: AppColors.primary, size: 28),
                   Text(
                     l10n.protocol_alpha.replaceAll('\n', ' ').toUpperCase(),
-                    style: const TextStyle(color: Color(0xFF2D2E33), fontSize: 18, fontFamily: 'Inter', fontWeight: FontWeight.w700, letterSpacing: -0.45),
+                    style: AppTextStyles.profileAppBar18,
                   ),
                   Container(
                     width: 36,
                     height: 36,
-                    decoration: const BoxDecoration(shape: BoxShape.circle, color: Color(0xFF1E293B)),
-                    child: const Icon(Icons.person, color: Colors.white, size: 20),
+                    decoration: const BoxDecoration(shape: BoxShape.circle, color: AppColors.deepSlate),
+                    child: const Icon(Icons.person, color: AppColors.white, size: 20),
                   ),
                 ],
               ),
@@ -57,17 +65,17 @@ class PlanScreen extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(l10n.protocol_alpha, style: const TextStyle(color: Color(0xFF2D2E33), fontSize: 32, fontFamily: 'Inter', fontWeight: FontWeight.w900, height: 1, letterSpacing: -1.60)),
+                              Text(l10n.protocol_alpha, style: AppTextStyles.profileVolume36.copyWith(fontSize: 32, letterSpacing: -1.60)),
                               const SizedBox(height: 8),
                               Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                                decoration: BoxDecoration(color: const Color(0xFFE6EFFF), borderRadius: BorderRadius.circular(20)),
+                                decoration: BoxDecoration(color: AppColors.lightBlueWhite, borderRadius: BorderRadius.circular(20)),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    const Icon(Icons.star_border, color: Color(0xFF0058BB), size: 12),
+                                    const Icon(Icons.star_border, color: AppColors.primary, size: 12),
                                     const SizedBox(width: 4),
-                                    Text(l10n.hypertrophy_focus, style: const TextStyle(color: Color(0xFF0058BB), fontSize: 10, fontFamily: 'Inter', fontWeight: FontWeight.w900, height: 1.50, letterSpacing: 1)),
+                                    Text(l10n.hypertrophy_focus, style: AppTextStyles.profileProMember10),
                                   ],
                                 ),
                               ),
@@ -76,13 +84,13 @@ class PlanScreen extends StatelessWidget {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
-                              Text(l10n.active_week, textAlign: TextAlign.right, style: const TextStyle(color: Color(0xFF5B5B60), fontSize: 10, fontFamily: 'Inter', fontWeight: FontWeight.w700, height: 1.50, letterSpacing: 1)),
+                              Text(l10n.active_week, textAlign: TextAlign.right, style: AppTextStyles.profileStatLabel10),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.baseline,
                                 textBaseline: TextBaseline.alphabetic,
                                 children: [
-                                  const Text('01', style: TextStyle(color: Color(0xFF0058BB), fontSize: 30, fontFamily: 'Inter', fontWeight: FontWeight.w900, height: 1.20)),
-                                  Text('/ 08', style: TextStyle(color: const Color(0xFF5B5B60).withOpacity(0.3), fontSize: 18, fontFamily: 'Inter', fontWeight: FontWeight.w900, height: 1.56)),
+                                  Text('01', style: AppTextStyles.profileName30.copyWith(color: AppColors.primary)),
+                                  Text('/ 08', style: AppTextStyles.profileConsistency18.copyWith(color: AppColors.textGrey.withOpacity(0.3))),
                                 ],
                               ),
                             ],
@@ -106,11 +114,11 @@ class PlanScreen extends StatelessWidget {
                       // -- الإيقاع الأسبوعي --
                       Container(
                         padding: const EdgeInsets.all(20),
-                        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24), boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.02), blurRadius: 10, offset: const Offset(0, 4))]),
+                        decoration: BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(24), boxShadow: const [BoxShadow(color: AppColors.darkCharcoal5, blurRadius: 10, offset: Offset(0, 4))]),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(l10n.weekly_rhythm, style: const TextStyle(color: Color(0xFF5B5B60), fontSize: 12, fontFamily: 'Inter', fontWeight: FontWeight.w900, height: 1.33, letterSpacing: 1.20)),
+                            Text(l10n.weekly_rhythm, style: AppTextStyles.addExSectionTitle),
                             const SizedBox(height: 16),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -132,23 +140,23 @@ class PlanScreen extends StatelessWidget {
                       // -- توازن التحفيز --
                       Container(
                         padding: const EdgeInsets.all(20),
-                        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24), boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.02), blurRadius: 10, offset: const Offset(0, 4))]),
+                        decoration: BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(24), boxShadow: const [BoxShadow(color: AppColors.darkCharcoal5, blurRadius: 10, offset: Offset(0, 4))]),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(l10n.stimulus_balance, style: const TextStyle(color: Color(0xFF5B5B60), fontSize: 12, fontFamily: 'Inter', fontWeight: FontWeight.w900, height: 1.33, letterSpacing: 1.20)),
-                                Text(l10n.optional_flow, style: const TextStyle(color: Color(0xFF0058BB), fontSize: 10, fontFamily: 'Inter', fontWeight: FontWeight.w700)),
+                                Text(l10n.stimulus_balance, style: AppTextStyles.addExSectionTitle),
+                                Text(l10n.optional_flow, style: AppTextStyles.label10Blue),
                               ],
                             ),
                             const SizedBox(height: 20),
-                            ProgressBarItem(label: l10n.push, percent: 35, color: const Color(0xFF0058BB)),
+                            ProgressBarItem(label: l10n.push, percent: 35, color: AppColors.primary),
                             const SizedBox(height: 16),
-                            ProgressBarItem(label: l10n.pull, percent: 30, color: const Color(0xFF4A8CF6)),
+                            ProgressBarItem(label: l10n.pull, percent: 30, color: AppColors.gradientStart),
                             const SizedBox(height: 16),
-                            ProgressBarItem(label: l10n.legs, percent: 35, color: const Color(0xFF8BA6DF)),
+                            ProgressBarItem(label: l10n.legs, percent: 35, color: AppColors.primaryLight),
                           ],
                         ),
                       ),
@@ -157,28 +165,28 @@ class PlanScreen extends StatelessWidget {
                       // -- رؤية المدرب --
                       Container(
                         padding: const EdgeInsets.all(20),
-                        decoration: BoxDecoration(color: const Color(0xFF0058BB), borderRadius: BorderRadius.circular(24)),
+                        decoration: BoxDecoration(color: AppColors.primary, borderRadius: BorderRadius.circular(24)),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
                               padding: const EdgeInsets.all(8),
-                              decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), shape: BoxShape.circle),
-                              child: const Icon(Icons.lightbulb_outline, color: Colors.white, size: 20),
+                              decoration: BoxDecoration(color: AppColors.white20, shape: BoxShape.circle),
+                              child: const Icon(Icons.lightbulb_outline, color: AppColors.white, size: 20),
                             ),
                             const SizedBox(width: 16),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(l10n.coach_insight, style: const TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Inter', fontWeight: FontWeight.w900, letterSpacing: 1.40)),
+                                  Text(l10n.coach_insight, style: AppTextStyles.textButton14Spacing.copyWith(color: AppColors.white)),
                                   const SizedBox(height: 8),
                                   Text.rich(
                                     TextSpan(
                                       children: [
-                                        TextSpan(text: l10n.coach_insight_p1, style: const TextStyle(color: Color(0xFFF0F2FF), fontSize: 14, fontFamily: 'Inter', fontWeight: FontWeight.w500, height: 1.63)),
-                                        TextSpan(text: l10n.coach_insight_p2, style: const TextStyle(color: Colors.white, fontSize: 14, fontFamily: 'Inter', fontWeight: FontWeight.w700, decoration: TextDecoration.underline)),
-                                        TextSpan(text: l10n.coach_insight_p3, style: const TextStyle(color: Color(0xFFF0F2FF), fontSize: 14, fontFamily: 'Inter', fontWeight: FontWeight.w500, height: 1.63)),
+                                        TextSpan(text: l10n.coach_insight_p1, style: AppTextStyles.body14WithHeight.copyWith(color: AppColors.lightBlueWhite)),
+                                        TextSpan(text: l10n.coach_insight_p2, style: AppTextStyles.spanBlueUnderline.copyWith(color: AppColors.white)),
+                                        TextSpan(text: l10n.coach_insight_p3, style: AppTextStyles.body14WithHeight.copyWith(color: AppColors.lightBlueWhite)),
                                       ],
                                     ),
                                   ),
@@ -194,12 +202,12 @@ class PlanScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(l10n.daily_protocols, style: const TextStyle(color: Color(0xFF2D2E33), fontSize: 20, fontFamily: 'Inter', fontWeight: FontWeight.w900, letterSpacing: -1)),
+                          Text(l10n.daily_protocols, style: AppTextStyles.trainRoutineTitle20.copyWith(fontWeight: FontWeight.w900)),
                           Row(
                             children: [
-                              Container(width: 6, height: 6, decoration: const BoxDecoration(color: Color(0xFF8BA6DF), shape: BoxShape.circle)),
+                              Container(width: 6, height: 6, decoration: const BoxDecoration(color: AppColors.primaryLight, shape: BoxShape.circle)),
                               const SizedBox(width: 4),
-                              Text(l10n.upcoming, style: const TextStyle(color: Color(0xFF5B5B60), fontSize: 10, fontFamily: 'Inter', fontWeight: FontWeight.w700, letterSpacing: 1)),
+                              Text(l10n.upcoming, style: AppTextStyles.label10GreyDark),
                             ],
                           ),
                         ],
@@ -214,22 +222,22 @@ class PlanScreen extends StatelessWidget {
                       // كارت الراحة النشطة
                       Container(
                         padding: const EdgeInsets.all(20),
-                        decoration: BoxDecoration(color: const Color(0xFFF4F4F6), borderRadius: BorderRadius.circular(24)),
+                        decoration: BoxDecoration(color: AppColors.surfaceColor, borderRadius: BorderRadius.circular(24)),
                         child: Row(
                           children: [
-                            Container(padding: const EdgeInsets.all(12), decoration: const BoxDecoration(color: Colors.white, shape: BoxShape.circle), child: const Icon(Icons.self_improvement, color: Color(0xFF0058BB))),
+                            Container(padding: const EdgeInsets.all(12), decoration: const BoxDecoration(color: AppColors.white, shape: BoxShape.circle), child: const Icon(Icons.self_improvement, color: AppColors.primary)),
                             const SizedBox(width: 16),
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(l10n.day3_wed, style: const TextStyle(color: Color(0xFF5B5B60), fontSize: 10, fontFamily: 'Inter', fontWeight: FontWeight.w700, letterSpacing: 1)),
+                                  Text(l10n.day3_wed, style: AppTextStyles.label10GreyDark),
                                   const SizedBox(height: 4),
-                                  Text(l10n.active_recovery, style: const TextStyle(color: Color(0xFF2D2E33), fontSize: 18, fontFamily: 'Inter', fontWeight: FontWeight.w900, letterSpacing: -0.45)),
+                                  Text(l10n.active_recovery, style: AppTextStyles.profileConsistency18),
                                 ],
                               ),
                             ),
-                            Container(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6), decoration: BoxDecoration(border: Border.all(color: const Color(0xFFD1D1D6)), borderRadius: BorderRadius.circular(16)), child: Text(l10n.rest, style: const TextStyle(color: Color(0xFF0058BB), fontSize: 10, fontFamily: 'Inter', fontWeight: FontWeight.w900))),
+                            Container(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6), decoration: BoxDecoration(border: Border.all(color: AppColors.borderDark), borderRadius: BorderRadius.circular(16)), child: Text(l10n.rest, style: AppTextStyles.profileProMember10)),
                           ],
                         ),
                       ),
@@ -238,27 +246,41 @@ class PlanScreen extends StatelessWidget {
                       // الكارت المغلق
                       Container(
                         padding: const EdgeInsets.all(20),
-                        decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(24), boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.02), blurRadius: 10, offset: const Offset(0, 4))]),
+                        decoration: BoxDecoration(color: AppColors.white, borderRadius: BorderRadius.circular(24), boxShadow: const [BoxShadow(color: AppColors.darkCharcoal5, blurRadius: 10, offset: Offset(0, 4))]),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               children: [
-                                Text(l10n.day4_thu, style: const TextStyle(color: Color(0xFF5B5B60), fontSize: 10, fontFamily: 'Inter', fontWeight: FontWeight.w900, letterSpacing: 1)),
+                                Text(l10n.day4_thu, style: AppTextStyles.label10GreyDark),
                                 const SizedBox(width: 12),
-                                const Icon(Icons.timer_outlined, color: Color(0xFF5B5B60), size: 12),
+                                const Icon(Icons.timer_outlined, color: AppColors.textGrey, size: 12),
                                 const SizedBox(width: 4),
-                                const Text('60m', style: TextStyle(color: Color(0xFF5B5B60), fontSize: 11, fontFamily: 'Inter', fontWeight: FontWeight.w700)),
+                                Text('60m', style: AppTextStyles.smallCaption11.copyWith(color: AppColors.textGrey)),
                               ],
                             ),
                             const SizedBox(height: 8),
-                            Text(l10n.legs_hypertrophy, style: const TextStyle(color: Color(0xFF2D2E33), fontSize: 20, fontFamily: 'Inter', fontWeight: FontWeight.w900, letterSpacing: -0.50)),
+                            Text(l10n.legs_hypertrophy, style: AppTextStyles.settingsName20.copyWith(fontWeight: FontWeight.w900)),
                             const SizedBox(height: 8),
-                            Text(l10n.legs_hypertrophy_desc, style: const TextStyle(color: Color(0xFF5B5B60), fontSize: 13, fontFamily: 'Inter', fontWeight: FontWeight.w500, height: 1.38)),
+                            Text(l10n.legs_hypertrophy_desc, style: AppTextStyles.cardSubtitle13),
                             const SizedBox(height: 16),
-                            Container(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6), decoration: BoxDecoration(color: const Color(0xFFF4F4F6), borderRadius: BorderRadius.circular(16)), child: Row(mainAxisSize: MainAxisSize.min, children: [const Icon(Icons.lock_outline, color: Color(0xFF5B5B60), size: 12), const SizedBox(width: 4), Text(l10n.locked, style: const TextStyle(color: Color(0xFF5B5B60), fontSize: 10, fontFamily: 'Inter', fontWeight: FontWeight.w900, letterSpacing: 1))])),
+                            Container(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6), decoration: BoxDecoration(color: AppColors.surfaceColor, borderRadius: BorderRadius.circular(16)), child: Row(mainAxisSize: MainAxisSize.min, children: [const Icon(Icons.lock_outline, color: AppColors.textGrey, size: 12), const SizedBox(width: 4), Text(l10n.locked, style: AppTextStyles.label10GreyDark)])),
                           ],
                         ),
+                      ),
+                      const SizedBox(height: 32),
+
+                      // 👇 الزر الجديد للانتقال لشاشة تسجيل الدخول
+                      CustomGradientButton(
+                        text: l10n.button_continue, // استخدم النص المناسب من الترجمة
+                        onPressed: () {
+                          // الانتقال لشاشة اللوجين وإغلاق الشاشات السابقة
+                          Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(builder: (context) => const LoginScreen()),
+                            (route) => false,
+                          );
+                        },
                       ),
                       const SizedBox(height: 32),
                     ],

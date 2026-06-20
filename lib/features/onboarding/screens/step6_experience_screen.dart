@@ -24,7 +24,14 @@ class Step6ExperienceScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(24, 16, 24, 0),
-              child: OnboardingTopBar(stepText: l10n.step_6_of_14, onSkip: () {}),
+              child: OnboardingTopBar(stepText: l10n.step_6_of_14, onSkip: () {
+                Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Step7PhysicalConstraintsScreen(), // 👈 غير HomeScreen باسم صفحتك
+      ),
+    );
+              }),
             ),
 
             Expanded(

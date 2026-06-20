@@ -46,7 +46,14 @@ class _Step2AgeScreenState extends State<Step2AgeScreen> {
               const SizedBox(height: 16),
               OnboardingTopBar(
                 stepText: l10n.step_2_of_14,
-                onSkip: () {},
+                onSkip: () {
+                  Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Step3GenderScreen(), // 👈 غير HomeScreen باسم صفحتك
+      ),
+    );
+                },
               ),
               const SizedBox(height: 32),
 
