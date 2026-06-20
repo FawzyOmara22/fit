@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "209129331418",
+    "project_id": "kinetic-f46f7",
+    "storage_bucket": "kinetic-f46f7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209129331418:android:704774a6658eff6d6523e3",
+        "android_client_info": {
+          "package_name": "com.example.kinetic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi8H7oB-c5EZGHlClyy5F0A5RfM-S6OIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
