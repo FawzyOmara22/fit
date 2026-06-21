@@ -2,9 +2,9 @@ class WorkoutSetModel {
   final String id;
   final String num;   // رقم المجموعة
   final String prev;  // الرقم السابق
-  final String kg;    // الوزن
-  final String reps;  // التكرارات
-  final bool isCompleted;
+  String kg;          // الوزن (شيلنا final عشان نقدر نعدل الرقم)
+  String reps;        // التكرارات (شيلنا final عشان نقدر نعدل الرقم)
+  bool isCompleted;   // (شيلنا final عشان نقدر نعلم صح)
   final bool isCurrent;
 
   WorkoutSetModel({

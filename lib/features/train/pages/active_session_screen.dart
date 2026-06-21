@@ -1,18 +1,18 @@
 import 'dart:ui';
+import 'dart:async'; // 👈 ضروري عشان الـ Timer
 import 'package:flutter/material.dart';
 import 'package:kinetic/core/l10n/app_localizations.dart';
-import 'package:kinetic/features/train/pages/ExerciseDetailScreen.dart';
-
-
+import 'package:kinetic/features/Ai/pages/Exercise%20Detail%20Screen.dart';
 
 // استدعاء الصفحات
 import 'package:kinetic/features/train/pages/AddExerciseScreen.dart';
 import 'package:kinetic/features/train/pages/session_summary_screen.dart';
 
+
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_text_style.dart';
 
-// استدعاء الموديلز و Widget الكارت الجديد
+// استدعاء الموديلز و Widget الكارت
 import '../data/models/exercise_model.dart';
 import '../data/models/workout_set_model.dart';
 import '../data/models/session_exercise_model.dart';
@@ -26,16 +26,20 @@ class ActiveSessionScreen extends StatefulWidget {
 }
 
 class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
-  // البيانات مبنية باستخدام الموديلز (Models) بدلاً من Map
+  // ================= العدادات (Timers) =================
+  Timer? _mainTimer;
+  int _mainSeconds = 0; // العداد الأساسي بيبدأ من صفر
+
+  Timer? _restTimer;
+  int _restSeconds = 0; // عداد الراحة
+  
+  // ================= الداتا =================
   final List<SessionExerciseModel> _activeExercises = [
     SessionExerciseModel(
       id: 's1',
       restTime: '2:00 Rest',
       exercise: ExerciseModel(
-        id: '1', 
-        title: 'Barbell Squat', 
-        muscle: 'Quadriceps', 
-        equipment: 'Barbell', 
+        id: '1', title: 'Barbell Squat', muscle: 'Quadriceps', equipment: 'Barbell', 
         imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=200&auto=format&fit=crop',
       ),
       sets: [
@@ -47,10 +51,7 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
       id: 's2',
       restTime: '1:30 Rest',
       exercise: ExerciseModel(
-        id: '2', 
-        title: 'Bench Press', 
-        muscle: 'Chest', 
-        equipment: 'Barbell', 
+        id: '2', title: 'Bench Press', muscle: 'Chest', equipment: 'Barbell', 
         imageUrl: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=200&auto=format&fit=crop',
       ),
       sets: [
@@ -58,6 +59,60 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
       ],
     ),
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    _startMainTimer(); // تشغيل العداد الأساسي أول ما الصفحة تفتح
+  }
+
+  @override
+  void dispose() {
+    _mainTimer?.cancel();
+    _restTimer?.cancel();
+    super.dispose();
+  }
+
+  // 👈 دالة العداد الأساسي
+  void _startMainTimer() {
+    _mainTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() {
+        _mainSeconds++;
+      });
+    });
+  }
+
+  // 👈 دالة عداد الراحة (بتشتغل لما ندوس صح في الكارت)
+  void _startRestTimer(int seconds) {
+    _restTimer?.cancel(); // نوقف أي عداد قديم
+    setState(() {
+      _restSeconds = seconds;
+    });
+    
+    _restTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (_restSeconds > 0) {
+        setState(() {
+          _restSeconds--;
+        });
+      } else {
+        timer.cancel(); // العداد خلص
+      }
+    });
+  }
+
+  // 👈 دوال تنسيق الوقت لشكل جميل (00:00:00)
+  String _formatMainTime(int totalSeconds) {
+    int h = totalSeconds ~/ 3600;
+    int m = (totalSeconds % 3600) ~/ 60;
+    int s = totalSeconds % 60;
+    return '${h.toString().padLeft(2, '0')}:${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}';
+  }
+
+  String _formatRestTime(int totalSeconds) {
+    int m = totalSeconds ~/ 60;
+    int s = totalSeconds % 60;
+    return '${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}';
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,21 +132,20 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
                 _buildHeader(l10n),
                 const SizedBox(height: 24),
                 
-                // 👇 عرض قائمة التمارين وتمرير الـ Navigation للكارت نفسه عشان يفتح الصفحة الجديدة
+                // عرض الكروت وتمرير دالة الراحة
                 ..._activeExercises.map((sessionEx) => Padding(
                   padding: const EdgeInsets.only(bottom: 24),
                   child: ActiveSessionExerciseCard(
                     sessionExercise: sessionEx,
                     onHeaderTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const ExerciseDetailScreen(), // 👈 هيفتح الصفحة الجديدة
-                        ),
-                      );
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const ExerciseDetailScreen()));
+                    },
+                    // 👈 بنستقبل وقت الراحة من الكارت ونشغل العداد
+                    onRestStarted: (restDuration) {
+                      _startRestTimer(restDuration);
                     },
                   ),
-                )),
+                )).toList(),
                 
                 _buildAddExerciseButton(context, l10n),
                 
@@ -100,10 +154,12 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
             ),
           ),
           
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: _buildFloatingRestTimer(l10n),
-          ),
+          // 👈 شريط الراحة السفلي بيظهر بس لو العداد أكبر من صفر
+          if (_restSeconds > 0)
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: _buildFloatingRestTimer(l10n),
+            ),
         ],
       ),
     );
@@ -119,7 +175,7 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
       ),
       title: Column(
         children: [
-          const Text('00:24:15', style: AppTextStyles.sessionTime18),
+          Text(_formatMainTime(_mainSeconds), style: AppTextStyles.sessionTime18), // 👈 العداد الأساسي لايف
           Text(l10n.sessionActive, style: AppTextStyles.sessionActive10),
         ],
       ),
@@ -128,10 +184,7 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
           padding: const EdgeInsets.only(right: 16, top: 10, bottom: 10),
           child: ElevatedButton(
             onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const SessionSummaryScreen()),
-              );
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SessionSummaryScreen()));
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.primary,
@@ -179,10 +232,7 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
   Widget _buildAddExerciseButton(BuildContext context, AppLocalizations l10n) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const AddExerciseScreen()),
-        );
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const AddExerciseScreen()));
       },
       child: Container(
         width: double.infinity,
@@ -226,9 +276,18 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
             ],
           ),
           const SizedBox(width: 32),
-          const Text('01:42', style: AppTextStyles.sessionRestTime20),
+          Text(_formatRestTime(_restSeconds), style: AppTextStyles.sessionRestTime20), // 👈 العداد التنازلي لايف
           const SizedBox(width: 12),
-          const Icon(Icons.skip_next, color: Colors.white, size: 24),
+          GestureDetector(
+            onTap: () {
+              // لو عايز يعمل Skip للراحة
+              setState(() {
+                _restTimer?.cancel();
+                _restSeconds = 0;
+              });
+            },
+            child: const Icon(Icons.skip_next, color: Colors.white, size: 24),
+          ),
         ],
       ),
     );
