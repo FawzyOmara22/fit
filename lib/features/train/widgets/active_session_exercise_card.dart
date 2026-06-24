@@ -1,5 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:kinetic/features/train/logic/workout_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:kinetic/core/l10n/app_localizations.dart';
 import 'package:kinetic/core/theme/app_colors.dart';
 import 'package:kinetic/core/theme/app_text_style.dart';
@@ -13,10 +15,11 @@ import '../pages/new_pr_screen.dart';
 import '../data/models/session_exercise_model.dart';
 import '../data/models/workout_set_model.dart';
 
+
 class ActiveSessionExerciseCard extends StatefulWidget {
   final SessionExerciseModel sessionExercise;
   final VoidCallback? onHeaderTap; 
-  final Function(int)? onRestStarted; // 👈 دالة عشان نبعت وقت الراحة للشاشة الأساسية
+  final Function(int)? onRestStarted;
 
   const ActiveSessionExerciseCard({
     Key? key,
@@ -30,37 +33,21 @@ class ActiveSessionExerciseCard extends StatefulWidget {
 }
 
 class _ActiveSessionExerciseCardState extends State<ActiveSessionExerciseCard> {
-  // متغير لوكال عشان نحفظ فيه المجاميع ونقدر نضيف عليها براحتنا
   late List<WorkoutSetModel> currentSets;
 
   @override
   void initState() {
     super.initState();
-    // بناخد نسخة من الداتا اللي جاية من الموديل
     currentSets = List.from(widget.sessionExercise.sets);
   }
 
-  // دالة تحويل النص بتاع الراحة لثواني (مثال: "2:00 Rest" -> 120 ثانية)
-  int _parseRestTime(String restString) {
-    try {
-      String timePart = restString.split(' ')[0]; 
-      List<String> parts = timePart.split(':');
-      int m = int.parse(parts[0]);
-      int s = int.parse(parts[1]);
-      return (m * 60) + s;
-    } catch (e) {
-      return 90; // وقت افتراضي لو حصل خطأ
-    }
-  }
-
-  // دالة إضافة مجموعة جديدة
   void _addNewSet() {
     setState(() {
       currentSets.add(
         WorkoutSetModel(
-          id: DateTime.now().millisecondsSinceEpoch.toString(), // ID عشوائي
+          id: DateTime.now().millisecondsSinceEpoch.toString(), 
           num: (currentSets.length + 1).toString(),
-          prev: '-', // مفيش رقم سابق للمجموعة الجديدة
+          prev: '-', 
           kg: '', 
           reps: '',
           isCompleted: false,
@@ -74,6 +61,7 @@ class _ActiveSessionExerciseCardState extends State<ActiveSessionExerciseCard> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final exercise = widget.sessionExercise.exercise;
+    final workoutProvider = context.watch<WorkoutProvider>();
 
     return Container(
       padding: const EdgeInsets.all(16),
@@ -144,7 +132,7 @@ class _ActiveSessionExerciseCardState extends State<ActiveSessionExerciseCard> {
                             children: [
                               const Icon(Icons.timer_outlined, color: AppColors.primary, size: 14),
                               const SizedBox(width: 4),
-                              Text(widget.sessionExercise.restTime, style: AppTextStyles.sessionExRest12),
+                              Text(workoutProvider.formattedDefaultRestTime, style: AppTextStyles.sessionExRest12),
                             ],
                           ),
                         ),
@@ -171,14 +159,12 @@ class _ActiveSessionExerciseCardState extends State<ActiveSessionExerciseCard> {
           ),
           const SizedBox(height: 12),
           
-          // عرض المجموعات
           ...currentSets.map((set) => _buildSetRow(context, set)).toList(),
           
           const SizedBox(height: 12),
           
-          // ============ زر إضافة مجموعة ============
           GestureDetector(
-            onTap: _addNewSet, // 👈 استدعاء دالة الإضافة
+            onTap: _addNewSet,
             child: Container(
               width: double.infinity,
               padding: const EdgeInsets.symmetric(vertical: 12),
@@ -207,9 +193,19 @@ class _ActiveSessionExerciseCardState extends State<ActiveSessionExerciseCard> {
             flex: 1,
             child: Row(
               children: [
-                if (setModel.isCurrent) Container(width: 4, height: 24, margin: const EdgeInsets.only(right: 8), decoration: BoxDecoration(color: AppColors.warningYellow, borderRadius: BorderRadius.circular(2))),
+                // 👇 التعديل الجديد: الخط الذهبي بيظهر بس لما المجموعة تخلص (isCompleted)
+                if (setModel.isCompleted) 
+                  Container(
+                    width: 4, 
+                    height: 24, 
+                    margin: const EdgeInsets.only(right: 8), 
+                    decoration: BoxDecoration(color: AppColors.warningYellow, borderRadius: BorderRadius.circular(2)),
+                  ),
+                
                 Text(setModel.num, style: AppTextStyles.sessionSetNum14),
-                if (setModel.isCurrent) 
+                
+                // 👇 التعديل الجديد: النجمة الذهبى بتظهر برضه لما المجموعة تخلص (isCompleted)
+                if (setModel.isCompleted) 
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => const NewPersonalRecordScreen()));
@@ -222,21 +218,21 @@ class _ActiveSessionExerciseCardState extends State<ActiveSessionExerciseCard> {
           // السابق
           Expanded(flex: 2, child: Text(setModel.prev, textAlign: TextAlign.center, style: AppTextStyles.sessionPrev12)),
           
-          // 👈 حقل الـ KG (قابل للتعديل)
+          // حقل الـ KG
           Expanded(
             flex: 1, 
             child: TextFormField(
               initialValue: setModel.kg,
               keyboardType: TextInputType.number,
               textAlign: TextAlign.center,
-              enabled: !setModel.isCompleted, // نقفل التعديل لو المجموعة خلصت
+              enabled: !setModel.isCompleted, 
               style: setModel.isCompleted ? AppTextStyles.sessionInput14 : AppTextStyles.sessionInputHint14.copyWith(color: AppColors.darkCharcoal),
               decoration: const InputDecoration(border: InputBorder.none, isDense: true, contentPadding: EdgeInsets.zero),
               onChanged: (val) => setModel.kg = val,
             ),
           ),
           
-          // 👈 حقل الـ Reps (قابل للتعديل)
+          // حقل الـ Reps
           Expanded(
             flex: 1, 
             child: TextFormField(
@@ -250,17 +246,22 @@ class _ActiveSessionExerciseCardState extends State<ActiveSessionExerciseCard> {
             ),
           ),
           
-          // 👈 زر علامة الصح (بيشغل التايمر)
+          // زر علامة الصح (تشغيل / إيقاف التايمر واللوجيك)
           GestureDetector(
             onTap: () {
               setState(() {
                 setModel.isCompleted = !setModel.isCompleted;
               });
               
-              // لو عمل صح، نبعت وقت الراحة للشاشة الأساسية
-              if (setModel.isCompleted && widget.onRestStarted != null) {
-                int restSeconds = _parseRestTime(widget.sessionExercise.restTime);
-                widget.onRestStarted!(restSeconds);
+              if (setModel.isCompleted) {
+                // 1. لو عمل صح -> بنشغل التايمر التنازلي للراحة
+                if (widget.onRestStarted != null) {
+                  int restSeconds = context.read<WorkoutProvider>().defaultRestSeconds;
+                  widget.onRestStarted!(restSeconds);
+                }
+              } else {
+                // 2. 👇 التعديل الجديد: لو شال علامة الصح (ضغط بالغلط) بنقفل التايمر فوراً ونخفي الشريط السفلي
+                context.read<WorkoutProvider>().stopRestTimer();
               }
             },
             child: Container(

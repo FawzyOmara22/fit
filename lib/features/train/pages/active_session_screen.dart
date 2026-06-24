@@ -1,13 +1,14 @@
 import 'dart:ui';
-import 'dart:async'; // 👈 ضروري عشان الـ Timer
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:kinetic/features/train/logic/workout_provider.dart';
+import 'package:provider/provider.dart'; // 👈 ضروري عشان الـ Provider
 import 'package:kinetic/core/l10n/app_localizations.dart';
 import 'package:kinetic/features/Ai/pages/Exercise%20Detail%20Screen.dart';
 
 // استدعاء الصفحات
 import 'package:kinetic/features/train/pages/AddExerciseScreen.dart';
 import 'package:kinetic/features/train/pages/session_summary_screen.dart';
-
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_text_style.dart';
@@ -26,12 +27,11 @@ class ActiveSessionScreen extends StatefulWidget {
 }
 
 class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
-  // ================= العدادات (Timers) =================
+  // ================= العداد الأساسي للتمرين كله =================
   Timer? _mainTimer;
-  int _mainSeconds = 0; // العداد الأساسي بيبدأ من صفر
-
-  Timer? _restTimer;
-  int _restSeconds = 0; // عداد الراحة
+  int _mainSeconds = 0; 
+  
+  // 💡 تم حذف العداد الخاص بالراحة من هنا تماماً لأن البروفايدر هو اللي هيشغله
   
   // ================= الداتا =================
   final List<SessionExerciseModel> _activeExercises = [
@@ -43,7 +43,7 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
         imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=200&auto=format&fit=crop',
       ),
       sets: [
-        WorkoutSetModel(id: 'set1', num: '1', prev: '100kg x 8', kg: '110', reps: '8', isCompleted: true, isCurrent: true),
+        WorkoutSetModel(id: 'set1', num: '1', prev: '100kg x 8', kg: '110', reps: '8', isCompleted: false, isCurrent: false),
         WorkoutSetModel(id: 'set2', num: '2', prev: '100kg x 8', kg: '105', reps: '8', isCompleted: false, isCurrent: false),
       ],
     ),
@@ -63,17 +63,16 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
   @override
   void initState() {
     super.initState();
-    _startMainTimer(); // تشغيل العداد الأساسي أول ما الصفحة تفتح
+    _startMainTimer(); 
   }
 
   @override
   void dispose() {
     _mainTimer?.cancel();
-    _restTimer?.cancel();
+    // 💡 مفيش داعي نعمل cancel لتايمر الراحة هنا، البروفايدر بيهندل ده لوحده
     super.dispose();
   }
 
-  // 👈 دالة العداد الأساسي
   void _startMainTimer() {
     _mainTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
@@ -82,25 +81,6 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
     });
   }
 
-  // 👈 دالة عداد الراحة (بتشتغل لما ندوس صح في الكارت)
-  void _startRestTimer(int seconds) {
-    _restTimer?.cancel(); // نوقف أي عداد قديم
-    setState(() {
-      _restSeconds = seconds;
-    });
-    
-    _restTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (_restSeconds > 0) {
-        setState(() {
-          _restSeconds--;
-        });
-      } else {
-        timer.cancel(); // العداد خلص
-      }
-    });
-  }
-
-  // 👈 دوال تنسيق الوقت لشكل جميل (00:00:00)
   String _formatMainTime(int totalSeconds) {
     int h = totalSeconds ~/ 3600;
     int m = (totalSeconds % 3600) ~/ 60;
@@ -108,15 +88,11 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
     return '${h.toString().padLeft(2, '0')}:${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}';
   }
 
-  String _formatRestTime(int totalSeconds) {
-    int m = totalSeconds ~/ 60;
-    int s = totalSeconds % 60;
-    return '${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}';
-  }
-
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    // 👇 مراقبة التايمر من البروفايدر عشان الشاشة تتحدث لايف
+    final workoutProvider = context.watch<WorkoutProvider>();
 
     return Scaffold(
       backgroundColor: AppColors.sessionBg,
@@ -132,7 +108,6 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
                 _buildHeader(l10n),
                 const SizedBox(height: 24),
                 
-                // عرض الكروت وتمرير دالة الراحة
                 ..._activeExercises.map((sessionEx) => Padding(
                   padding: const EdgeInsets.only(bottom: 24),
                   child: ActiveSessionExerciseCard(
@@ -140,25 +115,25 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
                     onHeaderTap: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => const ExerciseDetailScreen()));
                     },
-                    // 👈 بنستقبل وقت الراحة من الكارت ونشغل العداد
+                    // 👇 لما اليوزر يخلص Set، هنشغل التايمر من البروفايدر
                     onRestStarted: (restDuration) {
-                      _startRestTimer(restDuration);
+                      context.read<WorkoutProvider>().startRestTimer();
                     },
                   ),
                 )).toList(),
                 
                 _buildAddExerciseButton(context, l10n),
-                
                 const SizedBox(height: 120),
               ],
             ),
           ),
           
-          // 👈 شريط الراحة السفلي بيظهر بس لو العداد أكبر من صفر
-          if (_restSeconds > 0)
+          // 👇 شريط الراحة هيظهر بس لو الـ isResting بـ true في البروفايدر
+          if (workoutProvider.isResting)
             Align(
               alignment: Alignment.bottomCenter,
-              child: _buildFloatingRestTimer(l10n),
+              // 👇 بنمرر البروفايدر للدالة عشان يعرض الوقت الحقيقي ويعمل Skip
+              child: _buildFloatingRestTimer(context, l10n, workoutProvider),
             ),
         ],
       ),
@@ -175,7 +150,7 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
       ),
       title: Column(
         children: [
-          Text(_formatMainTime(_mainSeconds), style: AppTextStyles.sessionTime18), // 👈 العداد الأساسي لايف
+          Text(_formatMainTime(_mainSeconds), style: AppTextStyles.sessionTime18), 
           Text(l10n.sessionActive, style: AppTextStyles.sessionActive10),
         ],
       ),
@@ -229,10 +204,49 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
     );
   }
 
+  // 👇 التعديل المطلوب تم إضافته هنا
   Widget _buildAddExerciseButton(BuildContext context, AppLocalizations l10n) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const AddExerciseScreen()));
+      onTap: () async {
+        // 1. 👇 الانتقال لشاشة التمارين واستخدام await بانتظار التمارين الراجعة
+        final List<Map<String, dynamic>>? result = await Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const AddExerciseScreen()),
+        );
+
+        // 2. 👇 لو اليوزر اختار تمارين فعلاً ورجع بالسلامة
+        if (result != null && result.isNotEmpty) {
+          setState(() {
+            for (var exData in result) {
+              // إضافة كل تمرين تم اختياره جوه قائمة الـ Active Exercises
+              _activeExercises.add(
+                SessionExerciseModel(
+                  id: 's_${DateTime.now().millisecondsSinceEpoch}_${exData['id']}', // ID فريد ومميز
+                  restTime: '1:30 Rest', // قيمة افتراضية وهية كدة كدة هتقرأ من البروفايدر لايف
+                  exercise: ExerciseModel(
+                    id: exData['id'],
+                    title: exData['title'],
+                    muscle: exData['muscle'],
+                    equipment: exData['equipment'],
+                    imageUrl: exData['imageUrl'],
+                  ),
+                  sets: [
+                    // 👇 بنجهز تلقائياً أول مجموعة (Set 1) تكون فاضية عشان يبدأ يلعبها علطول
+                    WorkoutSetModel(
+                      id: 'set_${DateTime.now().microsecondsSinceEpoch}',
+                      num: '1',
+                      prev: '-', 
+                      kg: '',
+                      reps: '',
+                      isCompleted: false,
+                      isCurrent: false,
+                    ),
+                  ],
+                ),
+              );
+            }
+          });
+        }
       },
       child: Container(
         width: double.infinity,
@@ -242,6 +256,7 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(l10n.sessionAddExercise, style: AppTextStyles.sessionAddEx18),
+            const SizedBox(width: 8),
             Container(
               padding: const EdgeInsets.all(4),
               decoration: const BoxDecoration(color: AppColors.primary, shape: BoxShape.circle),
@@ -253,7 +268,8 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
     );
   }
 
-  Widget _buildFloatingRestTimer(AppLocalizations l10n) {
+  // 👇 تم تمرير البروفايدر هنا
+  Widget _buildFloatingRestTimer(BuildContext context, AppLocalizations l10n, WorkoutProvider provider) {
     return Container(
       margin: const EdgeInsets.only(bottom: 24, left: 40, right: 40),
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
@@ -276,15 +292,13 @@ class _ActiveSessionScreenState extends State<ActiveSessionScreen> {
             ],
           ),
           const SizedBox(width: 32),
-          Text(_formatRestTime(_restSeconds), style: AppTextStyles.sessionRestTime20), // 👈 العداد التنازلي لايف
+          // 👇 عرض الوقت من البروفايدر
+          Text(provider.formattedRemainingTime, style: AppTextStyles.sessionRestTime20), 
           const SizedBox(width: 12),
           GestureDetector(
             onTap: () {
-              // لو عايز يعمل Skip للراحة
-              setState(() {
-                _restTimer?.cancel();
-                _restSeconds = 0;
-              });
+              // 👇 لو عايز يعمل Skip، نبلغ البروفايدر يوقف العداد
+              context.read<WorkoutProvider>().stopRestTimer();
             },
             child: const Icon(Icons.skip_next, color: Colors.white, size: 24),
           ),

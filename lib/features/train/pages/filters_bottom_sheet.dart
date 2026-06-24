@@ -1,20 +1,34 @@
 import 'package:flutter/material.dart';
-// تأكد من ضبط مسار الترجمة والثيمات
 import 'package:kinetic/core/l10n/app_localizations.dart';
 import 'package:kinetic/core/theme/app_colors.dart';
 import 'package:kinetic/core/theme/app_text_style.dart';
 
 class FiltersBottomSheet extends StatefulWidget {
-  const FiltersBottomSheet({Key? key}) : super(key: key);
+  // 👇 ضفنا المتغيرات دي عشان نحتفظ باختيارات اليوزر السابقة
+  final String initialMuscle;
+  final String initialEquipment;
+
+  const FiltersBottomSheet({
+    Key? key, 
+    this.initialMuscle = 'All', 
+    this.initialEquipment = 'All'
+  }) : super(key: key);
 
   @override
   State<FiltersBottomSheet> createState() => _FiltersBottomSheetState();
 }
 
 class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
-  // القيم الافتراضية المحددة كما في التصميم
-  String _selectedMuscle = 'All'; 
-  String _selectedEquipment = 'All';
+  late String _selectedMuscle; 
+  late String _selectedEquipment;
+
+  @override
+  void initState() {
+    super.initState();
+    // 👇 سحب القيم المبدئية عند فتح الشيت
+    _selectedMuscle = widget.initialMuscle;
+    _selectedEquipment = widget.initialEquipment;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +44,7 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Drag Handle (المؤشر العلوي)
+          // Drag Handle
           Center(
             child: Container(
               width: 40,
@@ -43,7 +57,7 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
           ),
           const SizedBox(height: 24),
 
-          // Header (العنوان وزر الإغلاق)
+          // Header
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -69,9 +83,7 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
           ),
           const SizedBox(height: 32),
 
-          // ==========================================
-          // 1. Muscle Group Section (المجموعة العضلية)
-          // ==========================================
+          // Muscle Group Section
           Text(
             l10n.filterMuscleGroup,
             style: AppTextStyles.label10GreyDark.copyWith(letterSpacing: 1.0),
@@ -91,9 +103,7 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
           ),
           const SizedBox(height: 32),
 
-          // ==========================================
-          // 2. Equipment Section (الأدوات)
-          // ==========================================
+          // Equipment Section
           Text(
             l10n.filterEquipment,
             style: AppTextStyles.label10GreyDark.copyWith(letterSpacing: 1.0),
@@ -113,16 +123,12 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
           ),
           const SizedBox(height: 40),
           
-          // خط فاصل علوي للأزرار
           const Divider(height: 1, color: AppColors.divider),
           const SizedBox(height: 24),
 
-          // ==========================================
-          // 3. Bottom Actions (مسح الكل - تطبيق الفلاتر)
-          // ==========================================
+          // Bottom Actions
           Row(
             children: [
-              // 👇 التعديل هنا: إزالة Expanded لكي يأخذ النص مساحته الكاملة براحته
               TextButton(
                 onPressed: () {
                   setState(() {
@@ -139,7 +145,6 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
                 ),
               ),
               const SizedBox(width: 16),
-              // 👇 زر تطبيق الفلاتر يأخذ باقي المساحة المتبقية
               Expanded(
                 child: Container(
                   decoration: BoxDecoration(
@@ -155,6 +160,7 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
                   ),
                   child: ElevatedButton(
                     onPressed: () {
+                      // 👇 عند التطبيق، بنقفل الشيت ونرجع الداتا للشاشة الأساسية
                       Navigator.pop(context, {
                         'muscle': _selectedMuscle,
                         'equipment': _selectedEquipment,
@@ -185,9 +191,6 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
     );
   }
 
-  // ==========================================
-  // دالة مساعدة لإنشاء الأزرار (Chips)
-  // ==========================================
   Widget _buildFilterChip(String localizedText, String internalValue, bool isMuscleGroup) {
     bool isSelected = isMuscleGroup ? _selectedMuscle == internalValue : _selectedEquipment == internalValue;
 
