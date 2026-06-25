@@ -401,7 +401,7 @@ abstract class AppLocalizations {
   /// No description provided for @kg.
   ///
   /// In en, this message translates to:
-  /// **'kg'**
+  /// **'KG'**
   String get kg;
 
   /// No description provided for @lb.
@@ -2393,7 +2393,7 @@ abstract class AppLocalizations {
   /// No description provided for @recommended.
   ///
   /// In en, this message translates to:
-  /// **'RECOMMENDED'**
+  /// **'Recommended'**
   String get recommended;
 
   /// No description provided for @seeAll.
@@ -5503,6 +5503,678 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Drive with the heels. The deadlift is a push followed by a pull. Push the earth away.'**
   String get tip3;
+
+  /// No description provided for @training_prefs.
+  ///
+  /// In en, this message translates to:
+  /// **'Training Preferences'**
+  String get training_prefs;
+
+  /// No description provided for @customization.
+  ///
+  /// In en, this message translates to:
+  /// **'CUSTOMIZATION'**
+  String get customization;
+
+  /// No description provided for @precision_tuning.
+  ///
+  /// In en, this message translates to:
+  /// **'Precision Tuning.'**
+  String get precision_tuning;
+
+  /// No description provided for @precision_desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Calibrate your training environment\nfor peak performance and minimal\nfriction.'**
+  String get precision_desc;
+
+  /// No description provided for @workout_settings.
+  ///
+  /// In en, this message translates to:
+  /// **'Workout Settings'**
+  String get workout_settings;
+
+  /// No description provided for @general.
+  ///
+  /// In en, this message translates to:
+  /// **'GENERAL'**
+  String get general;
+
+  /// No description provided for @default_rest_timer.
+  ///
+  /// In en, this message translates to:
+  /// **'Default Rest Timer'**
+  String get default_rest_timer;
+
+  /// No description provided for @weight_units.
+  ///
+  /// In en, this message translates to:
+  /// **'Weight Units'**
+  String get weight_units;
+
+  /// No description provided for @metric_vs_imperial.
+  ///
+  /// In en, this message translates to:
+  /// **'Metric vs Imperial'**
+  String get metric_vs_imperial;
+
+  /// No description provided for @sound_effects.
+  ///
+  /// In en, this message translates to:
+  /// **'Sound Effects'**
+  String get sound_effects;
+
+  /// No description provided for @automation.
+  ///
+  /// In en, this message translates to:
+  /// **'Automation'**
+  String get automation;
+
+  /// No description provided for @workflow.
+  ///
+  /// In en, this message translates to:
+  /// **'WORKFLOW'**
+  String get workflow;
+
+  /// No description provided for @auto_start_rest.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-start Rest Timer'**
+  String get auto_start_rest;
+
+  /// No description provided for @auto_advance.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-advance Exercises'**
+  String get auto_advance;
+
+  /// No description provided for @vibrate_completion.
+  ///
+  /// In en, this message translates to:
+  /// **'Vibrate on Completion'**
+  String get vibrate_completion;
+
+  /// No description provided for @equipment.
+  ///
+  /// In en, this message translates to:
+  /// **'Equipment'**
+  String get equipment;
+
+  /// No description provided for @hardware.
+  ///
+  /// In en, this message translates to:
+  /// **'HARDWARE'**
+  String get hardware;
+
+  /// No description provided for @default_barbell.
+  ///
+  /// In en, this message translates to:
+  /// **'DEFAULT BARBELL'**
+  String get default_barbell;
+
+  /// No description provided for @fractionals.
+  ///
+  /// In en, this message translates to:
+  /// **'FRACTIONALS'**
+  String get fractionals;
+
+  /// No description provided for @enabled.
+  ///
+  /// In en, this message translates to:
+  /// **'Enabled'**
+  String get enabled;
+
+  /// No description provided for @apple_health.
+  ///
+  /// In en, this message translates to:
+  /// **'Apple Health'**
+  String get apple_health;
+
+  /// No description provided for @sync_workouts.
+  ///
+  /// In en, this message translates to:
+  /// **'Sync Workouts to\nHealthKit'**
+  String get sync_workouts;
+
+  /// No description provided for @connected.
+  ///
+  /// In en, this message translates to:
+  /// **'Connected'**
+  String get connected;
+
+  /// No description provided for @configure.
+  ///
+  /// In en, this message translates to:
+  /// **'Configure'**
+  String get configure;
+
+  /// No description provided for @reset_prefs.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset All Preferences'**
+  String get reset_prefs;
+
+  /// No description provided for @reset_note.
+  ///
+  /// In en, this message translates to:
+  /// **'Note: This will restore all workout settings to factory\ndefaults. This action cannot be undone.'**
+  String get reset_note;
+
+  /// No description provided for @integrations.
+  ///
+  /// In en, this message translates to:
+  /// **'Integrations'**
+  String get integrations;
+
+  /// No description provided for @sync_ecosystem.
+  ///
+  /// In en, this message translates to:
+  /// **'SYNC YOUR ECOSYSTEM'**
+  String get sync_ecosystem;
+
+  /// No description provided for @connect_sync.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect & Sync'**
+  String get connect_sync;
+
+  /// No description provided for @connect_sync_desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Power your training with data from your favorite apps and devices.'**
+  String get connect_sync_desc;
+
+  /// No description provided for @health_activity.
+  ///
+  /// In en, this message translates to:
+  /// **'HEALTH & ACTIVITY'**
+  String get health_activity;
+
+  /// No description provided for @social_sharing.
+  ///
+  /// In en, this message translates to:
+  /// **'SOCIAL & SHARING'**
+  String get social_sharing;
+
+  /// No description provided for @strava.
+  ///
+  /// In en, this message translates to:
+  /// **'Strava'**
+  String get strava;
+
+  /// No description provided for @garmin_connect.
+  ///
+  /// In en, this message translates to:
+  /// **'Garmin Connect'**
+  String get garmin_connect;
+
+  /// No description provided for @instagram.
+  ///
+  /// In en, this message translates to:
+  /// **'Instagram'**
+  String get instagram;
+
+  /// No description provided for @whatsapp.
+  ///
+  /// In en, this message translates to:
+  /// **'WhatsApp'**
+  String get whatsapp;
+
+  /// No description provided for @not_connected.
+  ///
+  /// In en, this message translates to:
+  /// **'Not connected'**
+  String get not_connected;
+
+  /// No description provided for @connect_btn.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect'**
+  String get connect_btn;
+
+  /// No description provided for @data_privacy.
+  ///
+  /// In en, this message translates to:
+  /// **'Data Privacy'**
+  String get data_privacy;
+
+  /// No description provided for @data_privacy_desc.
+  ///
+  /// In en, this message translates to:
+  /// **'Your trust is our priority. We only sync data with your explicit permission. You can revoke access at any time through this dashboard or your device settings. We never sell your biometric data to third parties.'**
+  String get data_privacy_desc;
+
+  /// No description provided for @view_privacy_policy.
+  ///
+  /// In en, this message translates to:
+  /// **'View Privacy Policy'**
+  String get view_privacy_policy;
+
+  /// No description provided for @dataManagement.
+  ///
+  /// In en, this message translates to:
+  /// **'Data Management'**
+  String get dataManagement;
+
+  /// No description provided for @kineticEngine.
+  ///
+  /// In en, this message translates to:
+  /// **'KINETIC ENGINE'**
+  String get kineticEngine;
+
+  /// No description provided for @yourTrainingEverywhere.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Training,\nEverywhere'**
+  String get yourTrainingEverywhere;
+
+  /// No description provided for @trainingEverywhereDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Own your journey. Seamlessly move your workout history between platforms or keep a secure local archive.'**
+  String get trainingEverywhereDesc;
+
+  /// No description provided for @dataPortability.
+  ///
+  /// In en, this message translates to:
+  /// **'Export to CSV for Data Portability'**
+  String get dataPortability;
+
+  /// No description provided for @availableFormats.
+  ///
+  /// In en, this message translates to:
+  /// **'AVAILABLE FORMATS'**
+  String get availableFormats;
+
+  /// No description provided for @exportToCsv.
+  ///
+  /// In en, this message translates to:
+  /// **'Export to CSV'**
+  String get exportToCsv;
+
+  /// No description provided for @exportCsvDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Generate a spreadsheet-ready file of all sets, weights, and timestamps. Perfect for custom analysis.'**
+  String get exportCsvDesc;
+
+  /// No description provided for @downloadSpreadsheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Download Spreadsheet'**
+  String get downloadSpreadsheet;
+
+  /// No description provided for @exportToJson.
+  ///
+  /// In en, this message translates to:
+  /// **'Export to JSON'**
+  String get exportToJson;
+
+  /// No description provided for @exportJsonDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Developer-friendly format containing your entire workout metadata structure and personal records.'**
+  String get exportJsonDesc;
+
+  /// No description provided for @generateSchema.
+  ///
+  /// In en, this message translates to:
+  /// **'Generate Schema'**
+  String get generateSchema;
+
+  /// No description provided for @migration.
+  ///
+  /// In en, this message translates to:
+  /// **'MIGRATION'**
+  String get migration;
+
+  /// No description provided for @importFromApps.
+  ///
+  /// In en, this message translates to:
+  /// **'Import from Hevy /\nStrong / Fitbod'**
+  String get importFromApps;
+
+  /// No description provided for @automaticParsing.
+  ///
+  /// In en, this message translates to:
+  /// **'Automatic parsing for major apps'**
+  String get automaticParsing;
+
+  /// No description provided for @migrationQuote.
+  ///
+  /// In en, this message translates to:
+  /// **'\"Moving platforms shouldn\'t mean losing years of progress. Our parser preserves your volume history and personal bests.\"'**
+  String get migrationQuote;
+
+  /// No description provided for @backup.
+  ///
+  /// In en, this message translates to:
+  /// **'BACKUP'**
+  String get backup;
+
+  /// No description provided for @cloudSync.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud Sync'**
+  String get cloudSync;
+
+  /// No description provided for @automatedStorage.
+  ///
+  /// In en, this message translates to:
+  /// **'Automated encrypted storage'**
+  String get automatedStorage;
+
+  /// No description provided for @lastBackup.
+  ///
+  /// In en, this message translates to:
+  /// **'Last backup: Today, 04:12 AM'**
+  String get lastBackup;
+
+  /// No description provided for @todayTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Today, 08:42 AM'**
+  String get todayTime;
+
+  /// No description provided for @backupNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Backup Now'**
+  String get backupNow;
+
+  /// No description provided for @privacyFirst.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy First'**
+  String get privacyFirst;
+
+  /// No description provided for @privacyDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Your data is encrypted and never sold to third parties. We believe your training metrics belong to you, and only you.'**
+  String get privacyDesc;
+
+  /// No description provided for @kineticProExperience.
+  ///
+  /// In en, this message translates to:
+  /// **'KINETIC PRO EXPERIENCE'**
+  String get kineticProExperience;
+
+  /// No description provided for @unlockPeakPerformance.
+  ///
+  /// In en, this message translates to:
+  /// **'UNLOCK YOUR PEAK\nPERFORMANCE'**
+  String get unlockPeakPerformance;
+
+  /// No description provided for @aiFormAnalysis.
+  ///
+  /// In en, this message translates to:
+  /// **'AI Form Analysis'**
+  String get aiFormAnalysis;
+
+  /// No description provided for @aiFormAnalysisDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Real-time technique correction with your camera.'**
+  String get aiFormAnalysisDesc;
+
+  /// No description provided for @personalAiCoach.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal AI Coach'**
+  String get personalAiCoach;
+
+  /// No description provided for @personalAiCoachDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'24/7 adaptive programming that learns from your sets.'**
+  String get personalAiCoachDesc;
+
+  /// No description provided for @advancedAnalytics.
+  ///
+  /// In en, this message translates to:
+  /// **'Advanced Analytics'**
+  String get advancedAnalytics;
+
+  /// No description provided for @advancedAnalyticsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'In-depth volume, 1RM, and fatigue tracking trends.'**
+  String get advancedAnalyticsDesc;
+
+  /// No description provided for @customWorkoutFolders.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom Workout Folders'**
+  String get customWorkoutFolders;
+
+  /// No description provided for @customWorkoutFoldersDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Organize your routines exactly the way you train.'**
+  String get customWorkoutFoldersDesc;
+
+  /// No description provided for @unlimitedCustomRoutines.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlimited Custom Routines'**
+  String get unlimitedCustomRoutines;
+
+  /// No description provided for @selectYourPath.
+  ///
+  /// In en, this message translates to:
+  /// **'SELECT YOUR PATH'**
+  String get selectYourPath;
+
+  /// No description provided for @yearlyPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Yearly Plan'**
+  String get yearlyPlan;
+
+  /// No description provided for @freeTrialIncluded.
+  ///
+  /// In en, this message translates to:
+  /// **'7-Day Free Trial included'**
+  String get freeTrialIncluded;
+
+  /// No description provided for @bestValue.
+  ///
+  /// In en, this message translates to:
+  /// **'BEST VALUE'**
+  String get bestValue;
+
+  /// No description provided for @startFreeTrial.
+  ///
+  /// In en, this message translates to:
+  /// **'START 7-DAY FREE TRIAL'**
+  String get startFreeTrial;
+
+  /// No description provided for @restorePurchase.
+  ///
+  /// In en, this message translates to:
+  /// **'RESTORE PURCHASE'**
+  String get restorePurchase;
+
+  /// No description provided for @termsOfService.
+  ///
+  /// In en, this message translates to:
+  /// **'TERMS OF SERVICE'**
+  String get termsOfService;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'PRIVACY POLICY'**
+  String get privacyPolicy;
+
+  /// No description provided for @copyrightText.
+  ///
+  /// In en, this message translates to:
+  /// **'© 2024 KINETIC EDITORIAL'**
+  String get copyrightText;
+
+  /// No description provided for @syncStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Sync Status'**
+  String get syncStatus;
+
+  /// No description provided for @allSystemsUpToDate.
+  ///
+  /// In en, this message translates to:
+  /// **'All systems up to date'**
+  String get allSystemsUpToDate;
+
+  /// No description provided for @lastFullSync.
+  ///
+  /// In en, this message translates to:
+  /// **'Last full sync: Today, 10:42 AM'**
+  String get lastFullSync;
+
+  /// No description provided for @activeServices.
+  ///
+  /// In en, this message translates to:
+  /// **'ACTIVE SERVICES'**
+  String get activeServices;
+
+  /// No description provided for @appleHealth.
+  ///
+  /// In en, this message translates to:
+  /// **'Apple Health'**
+  String get appleHealth;
+
+  /// No description provided for @googleDriveBackup.
+  ///
+  /// In en, this message translates to:
+  /// **'Google Drive Backup'**
+  String get googleDriveBackup;
+
+  /// No description provided for @syncedAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'Synced 2m ago'**
+  String get syncedAgo;
+
+  /// No description provided for @syncing.
+  ///
+  /// In en, this message translates to:
+  /// **'Syncing...'**
+  String get syncing;
+
+  /// No description provided for @syncAllData.
+  ///
+  /// In en, this message translates to:
+  /// **'Sync All Data'**
+  String get syncAllData;
+
+  /// No description provided for @recentActivity.
+  ///
+  /// In en, this message translates to:
+  /// **'RECENT ACTIVITY'**
+  String get recentActivity;
+
+  /// No description provided for @exportedWorkoutStrava.
+  ///
+  /// In en, this message translates to:
+  /// **'Exported Workout to Strava'**
+  String get exportedWorkoutStrava;
+
+  /// No description provided for @morningRun.
+  ///
+  /// In en, this message translates to:
+  /// **'Morning Run • 10:45 AM'**
+  String get morningRun;
+
+  /// No description provided for @pulledHeartRate.
+  ///
+  /// In en, this message translates to:
+  /// **'Pulled Heart Rate from Apple Health'**
+  String get pulledHeartRate;
+
+  /// No description provided for @backgroundSync.
+  ///
+  /// In en, this message translates to:
+  /// **'Background Sync • 10:42 AM'**
+  String get backgroundSync;
+
+  /// No description provided for @autoBackupCompleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Automatic Backup Completed'**
+  String get autoBackupCompleted;
+
+  /// No description provided for @cloudStorage.
+  ///
+  /// In en, this message translates to:
+  /// **'Cloud Storage • 04:12 AM'**
+  String get cloudStorage;
+
+  /// No description provided for @activity.
+  ///
+  /// In en, this message translates to:
+  /// **'ACTIVITY'**
+  String get activity;
+
+  /// No description provided for @avgHeartRate.
+  ///
+  /// In en, this message translates to:
+  /// **'AVG HEART RATE'**
+  String get avgHeartRate;
+
+  /// No description provided for @repeatThisWorkout.
+  ///
+  /// In en, this message translates to:
+  /// **'REPEAT THIS WORKOUT'**
+  String get repeatThisWorkout;
+
+  /// No description provided for @exerciseLog.
+  ///
+  /// In en, this message translates to:
+  /// **'EXERCISE LOG'**
+  String get exerciseLog;
+
+  /// No description provided for @set.
+  ///
+  /// In en, this message translates to:
+  /// **'SET'**
+  String get set;
+
+  /// No description provided for @comments.
+  ///
+  /// In en, this message translates to:
+  /// **'COMMENTS'**
+  String get comments;
+
+  /// No description provided for @reply.
+  ///
+  /// In en, this message translates to:
+  /// **'REPLY'**
+  String get reply;
+
+  /// No description provided for @journey.
+  ///
+  /// In en, this message translates to:
+  /// **'JOURNEY'**
+  String get journey;
+
+  /// No description provided for @workout.
+  ///
+  /// In en, this message translates to:
+  /// **'WORKOUT'**
+  String get workout;
+
+  /// No description provided for @explore.
+  ///
+  /// In en, this message translates to:
+  /// **'EXPLORE'**
+  String get explore;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'PROFILE'**
+  String get profile;
 }
 
 class _AppLocalizationsDelegate

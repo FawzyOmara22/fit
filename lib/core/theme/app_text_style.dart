@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
 class AppTextStyles {
+  static const TextStyle cardTitle16 = TextStyle(color: AppColors.darkCharcoal, fontSize: 16, fontFamily: 'Inter', fontWeight: FontWeight.w700, height: 1.50);
   // ==========================================
   // --- 1. Onboarding Top Bar & Navigation ---
   // ==========================================

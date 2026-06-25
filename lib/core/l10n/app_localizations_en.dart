@@ -165,7 +165,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get what_is_your_current_weight_p3 => '?';
 
   @override
-  String get kg => 'kg';
+  String get kg => 'KG';
 
   @override
   String get lb => 'LB';
@@ -1186,7 +1186,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get filters => 'Filters';
 
   @override
-  String get recommended => 'RECOMMENDED';
+  String get recommended => 'Recommended';
 
   @override
   String get seeAll => 'See All >';
@@ -2787,4 +2787,353 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get tip3 =>
       'Drive with the heels. The deadlift is a push followed by a pull. Push the earth away.';
+
+  @override
+  String get training_prefs => 'Training Preferences';
+
+  @override
+  String get customization => 'CUSTOMIZATION';
+
+  @override
+  String get precision_tuning => 'Precision Tuning.';
+
+  @override
+  String get precision_desc =>
+      'Calibrate your training environment\nfor peak performance and minimal\nfriction.';
+
+  @override
+  String get workout_settings => 'Workout Settings';
+
+  @override
+  String get general => 'GENERAL';
+
+  @override
+  String get default_rest_timer => 'Default Rest Timer';
+
+  @override
+  String get weight_units => 'Weight Units';
+
+  @override
+  String get metric_vs_imperial => 'Metric vs Imperial';
+
+  @override
+  String get sound_effects => 'Sound Effects';
+
+  @override
+  String get automation => 'Automation';
+
+  @override
+  String get workflow => 'WORKFLOW';
+
+  @override
+  String get auto_start_rest => 'Auto-start Rest Timer';
+
+  @override
+  String get auto_advance => 'Auto-advance Exercises';
+
+  @override
+  String get vibrate_completion => 'Vibrate on Completion';
+
+  @override
+  String get equipment => 'Equipment';
+
+  @override
+  String get hardware => 'HARDWARE';
+
+  @override
+  String get default_barbell => 'DEFAULT BARBELL';
+
+  @override
+  String get fractionals => 'FRACTIONALS';
+
+  @override
+  String get enabled => 'Enabled';
+
+  @override
+  String get apple_health => 'Apple Health';
+
+  @override
+  String get sync_workouts => 'Sync Workouts to\nHealthKit';
+
+  @override
+  String get connected => 'Connected';
+
+  @override
+  String get configure => 'Configure';
+
+  @override
+  String get reset_prefs => 'Reset All Preferences';
+
+  @override
+  String get reset_note =>
+      'Note: This will restore all workout settings to factory\ndefaults. This action cannot be undone.';
+
+  @override
+  String get integrations => 'Integrations';
+
+  @override
+  String get sync_ecosystem => 'SYNC YOUR ECOSYSTEM';
+
+  @override
+  String get connect_sync => 'Connect & Sync';
+
+  @override
+  String get connect_sync_desc =>
+      'Power your training with data from your favorite apps and devices.';
+
+  @override
+  String get health_activity => 'HEALTH & ACTIVITY';
+
+  @override
+  String get social_sharing => 'SOCIAL & SHARING';
+
+  @override
+  String get strava => 'Strava';
+
+  @override
+  String get garmin_connect => 'Garmin Connect';
+
+  @override
+  String get instagram => 'Instagram';
+
+  @override
+  String get whatsapp => 'WhatsApp';
+
+  @override
+  String get not_connected => 'Not connected';
+
+  @override
+  String get connect_btn => 'Connect';
+
+  @override
+  String get data_privacy => 'Data Privacy';
+
+  @override
+  String get data_privacy_desc =>
+      'Your trust is our priority. We only sync data with your explicit permission. You can revoke access at any time through this dashboard or your device settings. We never sell your biometric data to third parties.';
+
+  @override
+  String get view_privacy_policy => 'View Privacy Policy';
+
+  @override
+  String get dataManagement => 'Data Management';
+
+  @override
+  String get kineticEngine => 'KINETIC ENGINE';
+
+  @override
+  String get yourTrainingEverywhere => 'Your Training,\nEverywhere';
+
+  @override
+  String get trainingEverywhereDesc =>
+      'Own your journey. Seamlessly move your workout history between platforms or keep a secure local archive.';
+
+  @override
+  String get dataPortability => 'Export to CSV for Data Portability';
+
+  @override
+  String get availableFormats => 'AVAILABLE FORMATS';
+
+  @override
+  String get exportToCsv => 'Export to CSV';
+
+  @override
+  String get exportCsvDesc =>
+      'Generate a spreadsheet-ready file of all sets, weights, and timestamps. Perfect for custom analysis.';
+
+  @override
+  String get downloadSpreadsheet => 'Download Spreadsheet';
+
+  @override
+  String get exportToJson => 'Export to JSON';
+
+  @override
+  String get exportJsonDesc =>
+      'Developer-friendly format containing your entire workout metadata structure and personal records.';
+
+  @override
+  String get generateSchema => 'Generate Schema';
+
+  @override
+  String get migration => 'MIGRATION';
+
+  @override
+  String get importFromApps => 'Import from Hevy /\nStrong / Fitbod';
+
+  @override
+  String get automaticParsing => 'Automatic parsing for major apps';
+
+  @override
+  String get migrationQuote =>
+      '\"Moving platforms shouldn\'t mean losing years of progress. Our parser preserves your volume history and personal bests.\"';
+
+  @override
+  String get backup => 'BACKUP';
+
+  @override
+  String get cloudSync => 'Cloud Sync';
+
+  @override
+  String get automatedStorage => 'Automated encrypted storage';
+
+  @override
+  String get lastBackup => 'Last backup: Today, 04:12 AM';
+
+  @override
+  String get todayTime => 'Today, 08:42 AM';
+
+  @override
+  String get backupNow => 'Backup Now';
+
+  @override
+  String get privacyFirst => 'Privacy First';
+
+  @override
+  String get privacyDesc =>
+      'Your data is encrypted and never sold to third parties. We believe your training metrics belong to you, and only you.';
+
+  @override
+  String get kineticProExperience => 'KINETIC PRO EXPERIENCE';
+
+  @override
+  String get unlockPeakPerformance => 'UNLOCK YOUR PEAK\nPERFORMANCE';
+
+  @override
+  String get aiFormAnalysis => 'AI Form Analysis';
+
+  @override
+  String get aiFormAnalysisDesc =>
+      'Real-time technique correction with your camera.';
+
+  @override
+  String get personalAiCoach => 'Personal AI Coach';
+
+  @override
+  String get personalAiCoachDesc =>
+      '24/7 adaptive programming that learns from your sets.';
+
+  @override
+  String get advancedAnalytics => 'Advanced Analytics';
+
+  @override
+  String get advancedAnalyticsDesc =>
+      'In-depth volume, 1RM, and fatigue tracking trends.';
+
+  @override
+  String get customWorkoutFolders => 'Custom Workout Folders';
+
+  @override
+  String get customWorkoutFoldersDesc =>
+      'Organize your routines exactly the way you train.';
+
+  @override
+  String get unlimitedCustomRoutines => 'Unlimited Custom Routines';
+
+  @override
+  String get selectYourPath => 'SELECT YOUR PATH';
+
+  @override
+  String get yearlyPlan => 'Yearly Plan';
+
+  @override
+  String get freeTrialIncluded => '7-Day Free Trial included';
+
+  @override
+  String get bestValue => 'BEST VALUE';
+
+  @override
+  String get startFreeTrial => 'START 7-DAY FREE TRIAL';
+
+  @override
+  String get restorePurchase => 'RESTORE PURCHASE';
+
+  @override
+  String get termsOfService => 'TERMS OF SERVICE';
+
+  @override
+  String get privacyPolicy => 'PRIVACY POLICY';
+
+  @override
+  String get copyrightText => '© 2024 KINETIC EDITORIAL';
+
+  @override
+  String get syncStatus => 'Sync Status';
+
+  @override
+  String get allSystemsUpToDate => 'All systems up to date';
+
+  @override
+  String get lastFullSync => 'Last full sync: Today, 10:42 AM';
+
+  @override
+  String get activeServices => 'ACTIVE SERVICES';
+
+  @override
+  String get appleHealth => 'Apple Health';
+
+  @override
+  String get googleDriveBackup => 'Google Drive Backup';
+
+  @override
+  String get syncedAgo => 'Synced 2m ago';
+
+  @override
+  String get syncing => 'Syncing...';
+
+  @override
+  String get syncAllData => 'Sync All Data';
+
+  @override
+  String get recentActivity => 'RECENT ACTIVITY';
+
+  @override
+  String get exportedWorkoutStrava => 'Exported Workout to Strava';
+
+  @override
+  String get morningRun => 'Morning Run • 10:45 AM';
+
+  @override
+  String get pulledHeartRate => 'Pulled Heart Rate from Apple Health';
+
+  @override
+  String get backgroundSync => 'Background Sync • 10:42 AM';
+
+  @override
+  String get autoBackupCompleted => 'Automatic Backup Completed';
+
+  @override
+  String get cloudStorage => 'Cloud Storage • 04:12 AM';
+
+  @override
+  String get activity => 'ACTIVITY';
+
+  @override
+  String get avgHeartRate => 'AVG HEART RATE';
+
+  @override
+  String get repeatThisWorkout => 'REPEAT THIS WORKOUT';
+
+  @override
+  String get exerciseLog => 'EXERCISE LOG';
+
+  @override
+  String get set => 'SET';
+
+  @override
+  String get comments => 'COMMENTS';
+
+  @override
+  String get reply => 'REPLY';
+
+  @override
+  String get journey => 'JOURNEY';
+
+  @override
+  String get workout => 'WORKOUT';
+
+  @override
+  String get explore => 'EXPLORE';
+
+  @override
+  String get profile => 'PROFILE';
 }

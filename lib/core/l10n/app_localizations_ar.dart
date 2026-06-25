@@ -2264,7 +2264,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get hours_unit => 'ساعة';
 
   @override
-  String get bpm => 'نبضة/د';
+  String get bpm => 'ن/د';
 
   @override
   String get mon => 'إثن';
@@ -2384,7 +2384,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get body => 'Body';
 
   @override
-  String get totalVolume => 'TOTAL VOLUME';
+  String get totalVolume => 'إجمالي الحجم';
 
   @override
   String get increaseFromLastMonth => 'increase from last month';
@@ -2615,7 +2615,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get currentPeakPerformance => 'أعلى أداء حالي';
 
   @override
-  String get reps => 'عدة';
+  String get reps => 'تكرار';
 
   @override
   String get top5Percent => 'أفضل 5% في فئتك العمرية';
@@ -2778,4 +2778,353 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get tip3 =>
       'ادفع بكعبيك. الرفعة المميتة هي دفع يتبعه سحب. ادفع الأرض بعيداً عنك.';
+
+  @override
+  String get training_prefs => 'تفضيلات التدريب';
+
+  @override
+  String get customization => 'التخصيص';
+
+  @override
+  String get precision_tuning => 'الضبط الدقيق.';
+
+  @override
+  String get precision_desc =>
+      'قم بمعايرة بيئة التدريب الخاصة بك\nللحصول على أعلى أداء وأقل\nمجهود.';
+
+  @override
+  String get workout_settings => 'إعدادات التمرين';
+
+  @override
+  String get general => 'عام';
+
+  @override
+  String get default_rest_timer => 'مؤقت الراحة الافتراضي';
+
+  @override
+  String get weight_units => 'وحدات الوزن';
+
+  @override
+  String get metric_vs_imperial => 'متري مقابل إمبراطوري';
+
+  @override
+  String get sound_effects => 'المؤثرات الصوتية';
+
+  @override
+  String get automation => 'الأتمتة';
+
+  @override
+  String get workflow => 'سير العمل';
+
+  @override
+  String get auto_start_rest => 'بدء مؤقت الراحة تلقائياً';
+
+  @override
+  String get auto_advance => 'التقدم التلقائي للتمارين';
+
+  @override
+  String get vibrate_completion => 'الاهتزاز عند الانتهاء';
+
+  @override
+  String get equipment => 'المعدات';
+
+  @override
+  String get hardware => 'الأجهزة';
+
+  @override
+  String get default_barbell => 'الباربل الافتراضي';
+
+  @override
+  String get fractionals => 'الأوزان الجزئية';
+
+  @override
+  String get enabled => 'مفعل';
+
+  @override
+  String get apple_health => 'Apple Health';
+
+  @override
+  String get sync_workouts => 'مزامنة التمارين مع\nHealthKit';
+
+  @override
+  String get connected => 'متصل';
+
+  @override
+  String get configure => 'تكوين';
+
+  @override
+  String get reset_prefs => 'إعادة ضبط كل التفضيلات';
+
+  @override
+  String get reset_note =>
+      'ملاحظة: سيؤدي هذا إلى استعادة جميع إعدادات التمرين إلى\nالوضع الافتراضي. لا يمكن التراجع عن هذا الإجراء.';
+
+  @override
+  String get integrations => 'عمليات الربط';
+
+  @override
+  String get sync_ecosystem => 'مزامنة نظامك';
+
+  @override
+  String get connect_sync => 'الربط والمزامنة';
+
+  @override
+  String get connect_sync_desc =>
+      'عزز تدريبك باستخدام البيانات من تطبيقاتك وأجهزتك المفضلة.';
+
+  @override
+  String get health_activity => 'الصحة والنشاط';
+
+  @override
+  String get social_sharing => 'المشاركة الاجتماعية';
+
+  @override
+  String get strava => 'سترافا (Strava)';
+
+  @override
+  String get garmin_connect => 'Garmin Connect';
+
+  @override
+  String get instagram => 'Instagram';
+
+  @override
+  String get whatsapp => 'WhatsApp';
+
+  @override
+  String get not_connected => 'غير متصل';
+
+  @override
+  String get connect_btn => 'ربط';
+
+  @override
+  String get data_privacy => 'خصوصية البيانات';
+
+  @override
+  String get data_privacy_desc =>
+      'ثقتك هي أولويتنا. نحن نقوم بمزامنة البيانات فقط بإذن صريح منك. يمكنك إبطال الوصول في أي وقت من خلال لوحة التحكم هذه أو إعدادات جهازك. نحن لا نبيع بياناتك البيومترية لأطراف ثالثة أبداً.';
+
+  @override
+  String get view_privacy_policy => 'عرض سياسة الخصوصية';
+
+  @override
+  String get dataManagement => 'إدارة البيانات';
+
+  @override
+  String get kineticEngine => 'محرك KINETIC';
+
+  @override
+  String get yourTrainingEverywhere => 'تدريبك في\nكل مكان';
+
+  @override
+  String get trainingEverywhereDesc =>
+      'امتلك رحلتك. انقل سجل تمارينك بسلاسة بين المنصات أو احتفظ بأرشيف محلي آمن.';
+
+  @override
+  String get dataPortability => 'تصدير إلى CSV لسهولة نقل البيانات';
+
+  @override
+  String get availableFormats => 'الصيغ المتاحة';
+
+  @override
+  String get exportToCsv => 'تصدير إلى CSV';
+
+  @override
+  String get exportCsvDesc =>
+      'قم بإنشاء ملف جاهز لجداول البيانات يحتوي على جميع المجموعات والأوزان والأوقات. مثالي للتحليل المخصص.';
+
+  @override
+  String get downloadSpreadsheet => 'تحميل جدول البيانات';
+
+  @override
+  String get exportToJson => 'تصدير إلى JSON';
+
+  @override
+  String get exportJsonDesc =>
+      'صيغة صديقة للمطورين تحتوي على هيكل البيانات الوصفية لتمرينك بالكامل وأرقامك القياسية.';
+
+  @override
+  String get generateSchema => 'إنشاء مخطط (Schema)';
+
+  @override
+  String get migration => 'الترحيل';
+
+  @override
+  String get importFromApps => 'استيراد من Hevy /\nStrong / Fitbod';
+
+  @override
+  String get automaticParsing => 'تحليل تلقائي للتطبيقات الكبرى';
+
+  @override
+  String get migrationQuote =>
+      '\"تغيير المنصات لا ينبغي أن يعني فقدان سنوات من التقدم. المحلل الخاص بنا يحافظ على تاريخ حجم تدريبك وأرقامك القياسية.\"';
+
+  @override
+  String get backup => 'النسخ الاحتياطي';
+
+  @override
+  String get cloudSync => 'المزامنة السحابية';
+
+  @override
+  String get automatedStorage => 'تخزين مشفر آمن تلقائياً';
+
+  @override
+  String get lastBackup => 'آخر نسخة: اليوم، 04:12 ص';
+
+  @override
+  String get todayTime => 'اليوم، 08:42 ص';
+
+  @override
+  String get backupNow => 'نسخ احتياطي الآن';
+
+  @override
+  String get privacyFirst => 'الخصوصية أولاً';
+
+  @override
+  String get privacyDesc =>
+      'بياناتك مشفرة ولا يتم بيعها أبداً لأطراف ثالثة. نحن نؤمن بأن مقاييس تدريبك ملك لك وحدك.';
+
+  @override
+  String get kineticProExperience => 'تجربة كينيتيك برو';
+
+  @override
+  String get unlockPeakPerformance => 'أطلق العنان لأقصى\nأداء لديك';
+
+  @override
+  String get aiFormAnalysis => 'تحليل الأداء بالذكاء الاصطناعي';
+
+  @override
+  String get aiFormAnalysisDesc =>
+      'تصحيح التقنية في الوقت الفعلي باستخدام الكاميرا.';
+
+  @override
+  String get personalAiCoach => 'مدرب شخصي ذكي';
+
+  @override
+  String get personalAiCoachDesc =>
+      'برمجة متكيفة على مدار الساعة تتعلم من تمرينك.';
+
+  @override
+  String get advancedAnalytics => 'تحليلات متقدمة';
+
+  @override
+  String get advancedAnalyticsDesc =>
+      'تتبع متعمق للحجم، وأقصى وزن لتكرار واحد، ومؤشرات الإرهاق.';
+
+  @override
+  String get customWorkoutFolders => 'مجلدات تمارين مخصصة';
+
+  @override
+  String get customWorkoutFoldersDesc =>
+      'نظم روتينك بالطريقة التي تتمرن بها تماماً.';
+
+  @override
+  String get unlimitedCustomRoutines => 'روتينات مخصصة غير محدودة';
+
+  @override
+  String get selectYourPath => 'اختر مسارك';
+
+  @override
+  String get yearlyPlan => 'الخطة السنوية';
+
+  @override
+  String get freeTrialIncluded => 'تتضمن نسخة تجريبية لـ 7 أيام';
+
+  @override
+  String get bestValue => 'أفضل قيمة';
+
+  @override
+  String get startFreeTrial => 'ابدأ نسختك التجريبية المجانية';
+
+  @override
+  String get restorePurchase => 'استعادة المشتريات';
+
+  @override
+  String get termsOfService => 'شروط الخدمة';
+
+  @override
+  String get privacyPolicy => 'سياسة الخصوصية';
+
+  @override
+  String get copyrightText => '© 2024 كينيتيك إديتوريال';
+
+  @override
+  String get syncStatus => 'حالة المزامنة';
+
+  @override
+  String get allSystemsUpToDate => 'جميع الأنظمة محدثة';
+
+  @override
+  String get lastFullSync => 'آخر مزامنة كاملة: اليوم، 10:42 ص';
+
+  @override
+  String get activeServices => 'الخدمات النشطة';
+
+  @override
+  String get appleHealth => 'صحة أبل';
+
+  @override
+  String get googleDriveBackup => 'نسخ احتياطي لجوجل درايف';
+
+  @override
+  String get syncedAgo => 'تمت المزامنة منذ دقيقتين';
+
+  @override
+  String get syncing => 'جاري المزامنة...';
+
+  @override
+  String get syncAllData => 'مزامنة كل البيانات';
+
+  @override
+  String get recentActivity => 'النشاط الأخير';
+
+  @override
+  String get exportedWorkoutStrava => 'تم تصدير التمرين إلى سترافا';
+
+  @override
+  String get morningRun => 'جري صباحي • 10:45 ص';
+
+  @override
+  String get pulledHeartRate => 'تم سحب نبضات القلب من صحة أبل';
+
+  @override
+  String get backgroundSync => 'مزامنة بالخلفية • 10:42 ص';
+
+  @override
+  String get autoBackupCompleted => 'اكتمل النسخ الاحتياطي التلقائي';
+
+  @override
+  String get cloudStorage => 'التخزين السحابي • 04:12 ص';
+
+  @override
+  String get activity => 'النشاط';
+
+  @override
+  String get avgHeartRate => 'متوسط نبضات القلب';
+
+  @override
+  String get repeatThisWorkout => 'إعادة هذا التمرين';
+
+  @override
+  String get exerciseLog => 'سجل التمارين';
+
+  @override
+  String get set => 'مجموعة';
+
+  @override
+  String get comments => 'التعليقات';
+
+  @override
+  String get reply => 'رد';
+
+  @override
+  String get journey => 'الرحلة';
+
+  @override
+  String get workout => 'التمرين';
+
+  @override
+  String get explore => 'اكتشف';
+
+  @override
+  String get profile => 'الحساب';
 }

@@ -8,6 +8,18 @@ import 'package:kinetic/features/onboarding/provider/onboarding_provider.dart';
 import 'package:kinetic/features/splash/screeens/splash_screen.dart';
 import 'package:kinetic/features/train/logic/train_provider.dart';
 import 'package:kinetic/features/train/logic/workout_provider.dart';
+import 'package:kinetic/features/training_preferences/provider/activity_provider.dart';
+import 'package:kinetic/features/training_preferences/provider/data_management_provider.dart';
+import 'package:kinetic/features/training_preferences/provider/integration_provider.dart';
+import 'package:kinetic/features/training_preferences/provider/preferences_provider.dart';
+import 'package:kinetic/features/training_preferences/provider/subscription_provider.dart';
+import 'package:kinetic/features/training_preferences/provider/sync_provider.dart';
+import 'package:kinetic/features/training_preferences/screen/activity_screen.dart';
+import 'package:kinetic/features/training_preferences/screen/data_management_screen.dart';
+import 'package:kinetic/features/training_preferences/screen/integrations_screen.dart';
+import 'package:kinetic/features/training_preferences/screen/paywall_screen.dart';
+import 'package:kinetic/features/training_preferences/screen/sync_screen.dart';
+import 'package:kinetic/features/training_preferences/screen/training_preferences_screen.dart';
 import 'package:kinetic/firebase_options.dart'; 
 import 'package:provider/provider.dart';
 import 'core/providers/language_provider.dart'; 
@@ -41,6 +53,12 @@ class MyApp extends StatelessWidget {
         // 👇 ده السطر الجديد اللي ضفناه عشان شاشة الـ Train تشتغل
         ChangeNotifierProvider(create: (_) => TrainProvider()),
         ChangeNotifierProvider(create: (_) => WorkoutProvider()),
+        ChangeNotifierProvider(create: (_) => PreferencesProvider()),
+        ChangeNotifierProvider(create: (_) => IntegrationProvider()),
+        ChangeNotifierProvider(create: (_) => DataManagementProvider()),
+        ChangeNotifierProvider(create: (_) => SubscriptionProvider()),
+        ChangeNotifierProvider(create: (_) => SyncProvider()),
+        ChangeNotifierProvider(create: (_) => ActivityProvider()),
       ],
       child: Consumer<LanguageProvider>(
         builder: (context, langProvider, child) {
@@ -63,7 +81,7 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: AppColors.scaffoldBackground,
               fontFamily: 'Inter',
             ),
-            home: const SplashScreen(),
+            home: const ActivityScreen(),
           );
         },
       ),
