@@ -4,6 +4,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:kinetic/core/l10n/app_localizations.dart';
 import 'package:kinetic/core/theme/app_colors.dart';
+import 'package:kinetic/features/coaching/provider/assign_workout_provider.dart';
+import 'package:kinetic/features/coaching/provider/assignment_detail_provider.dart';
+import 'package:kinetic/features/coaching/provider/chat_provider.dart';
+import 'package:kinetic/features/coaching/provider/client_provider.dart';
+import 'package:kinetic/features/coaching/provider/coaching_provider.dart';
+import 'package:kinetic/features/coaching/provider/feed_provider.dart';
+import 'package:kinetic/features/coaching/provider/invite_provider.dart';
+import 'package:kinetic/features/coaching/provider/notifications_provider.dart';
+import 'package:kinetic/features/coaching/provider/session_review_provider.dart';
+import 'package:kinetic/features/coaching/provider/workout_schedule_provider.dart';
+import 'package:kinetic/features/coaching/screen/assign_workout_screen.dart';
+import 'package:kinetic/features/coaching/screen/assignment_detail_screen.dart';
+import 'package:kinetic/features/coaching/screen/chat_screen.dart';
+import 'package:kinetic/features/coaching/screen/client_activity_screen.dart';
+import 'package:kinetic/features/coaching/screen/clients_screen.dart';
+import 'package:kinetic/features/coaching/screen/coaching_screen.dart';
+import 'package:kinetic/features/coaching/screen/invite_screen.dart';
+import 'package:kinetic/features/coaching/screen/notifications_screen.dart';
+import 'package:kinetic/features/coaching/screen/session_review_screen.dart';
+import 'package:kinetic/features/coaching/screen/workout_schedule_screen.dart';
 import 'package:kinetic/features/onboarding/provider/onboarding_provider.dart';
 import 'package:kinetic/features/splash/screeens/splash_screen.dart';
 import 'package:kinetic/features/train/logic/train_provider.dart';
@@ -59,6 +79,16 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => SubscriptionProvider()),
         ChangeNotifierProvider(create: (_) => SyncProvider()),
         ChangeNotifierProvider(create: (_) => ActivityProvider()),
+        ChangeNotifierProvider(create: (_) => CoachingProvider()),
+        ChangeNotifierProvider(create: (_) => FeedProvider()),
+        ChangeNotifierProvider(create: (_) => ClientProvider()),
+        ChangeNotifierProvider(create: (_) => AssignWorkoutProvider()),
+        ChangeNotifierProvider(create: (_) => AssignmentDetailProvider()),
+        ChangeNotifierProvider(create: (_) => SessionReviewProvider()),
+        ChangeNotifierProvider(create: (_) => ChatProvider()),
+        ChangeNotifierProvider(create: (_) => InviteProvider()),
+        ChangeNotifierProvider(create: (_) => NotificationsProvider()),
+        ChangeNotifierProvider(create: (_) => WorkoutScheduleProvider()),
       ],
       child: Consumer<LanguageProvider>(
         builder: (context, langProvider, child) {
@@ -81,7 +111,7 @@ class MyApp extends StatelessWidget {
               scaffoldBackgroundColor: AppColors.scaffoldBackground,
               fontFamily: 'Inter',
             ),
-            home: const ActivityScreen(),
+            home: const WorkoutScheduleScreen(),
           );
         },
       ),

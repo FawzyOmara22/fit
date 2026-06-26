@@ -357,7 +357,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get performance => 'أداء';
 
   @override
-  String get endurance => 'تحمل';
+  String get endurance => 'قوة تحمل';
 
   @override
   String get min_30 => '30 دقيقة';
@@ -2408,7 +2408,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get avgPerWeek => 'avg / week';
 
   @override
-  String get onTrack => 'On Track';
+  String get onTrack => 'على المسار';
 
   @override
   String get muscleGroupSplit => 'Muscle Group Split';
@@ -2545,7 +2545,7 @@ class AppLocalizationsAr extends AppLocalizations {
       'المستخدمون الذين يسجلون قياساتهم أسبوعياً تزيد فرصتهم 3 مرات في الوصول لهدفهم.';
 
   @override
-  String get yesterday => 'الأمس';
+  String get yesterday => 'أمس';
 
   @override
   String get sinceLastEntry => 'منذ آخر إدخال';
@@ -2563,7 +2563,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get viewFullChart => 'عرض الرسم البياني كاملاً';
 
   @override
-  String get stayConsistent => 'استمر بانتظام';
+  String get stayConsistent => 'حافظ على التزامك ومسؤوليتك';
 
   @override
   String get consistencyMsg =>
@@ -2606,7 +2606,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get chestAndTriceps => 'الصدر والترايسبس';
 
   @override
-  String get benchPress => 'ضغط الصدر (بنش برس)';
+  String get benchPress => 'ضغط بنش';
 
   @override
   String get est1RM => 'الحد الأقصى التقديري';
@@ -2615,7 +2615,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get currentPeakPerformance => 'أعلى أداء حالي';
 
   @override
-  String get reps => 'تكرار';
+  String get reps => 'تكرارات';
 
   @override
   String get top5Percent => 'أفضل 5% في فئتك العمرية';
@@ -2666,7 +2666,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get topLiftersBadge => 'أنت من أفضل 5% من المتدربين';
 
   @override
-  String get workouts => 'تمرين';
+  String get workouts => 'التمارين';
 
   @override
   String get kgLifted => 'كجم رُفعت';
@@ -3120,11 +3120,527 @@ class AppLocalizationsAr extends AppLocalizations {
   String get journey => 'الرحلة';
 
   @override
-  String get workout => 'التمرين';
+  String get workout => 'تمرين';
 
   @override
   String get explore => 'اكتشف';
 
   @override
   String get profile => 'الحساب';
+
+  @override
+  String get kineticCoaching => 'تدريب كينيتيك';
+
+  @override
+  String get activeChat => 'محادثة نشطة';
+
+  @override
+  String get messageYourCoaches => 'راسل مدربيك';
+
+  @override
+  String get unreadUpdates => 'تحديثان غير مقروءين من الكوتش';
+
+  @override
+  String get myCoaches => 'مدربيني';
+
+  @override
+  String get message => 'مراسلة';
+
+  @override
+  String get exploreTopCoaches => 'استكشف أفضل المدربين';
+
+  @override
+  String get expertGuidance => 'توجيه خبراء لكل هدف';
+
+  @override
+  String get connect => 'تواصل';
+
+  @override
+  String get signaturePrograms => 'البرامج المميزة';
+
+  @override
+  String get withCoach => 'مع الكوتش';
+
+  @override
+  String get theKineticEdge => 'ميزة كينيتيك';
+
+  @override
+  String get whyWorkWithCertifiedCoach => 'لماذا تتدرب مع مدرب معتمد؟';
+
+  @override
+  String get personalizedPlans => 'خطط مخصصة';
+
+  @override
+  String get tailoredToYourBody => 'مصممة خصيصاً لطبيعة جسمك';
+
+  @override
+  String get formChecks => 'مراجعة الأداء';
+
+  @override
+  String get aiAssistedVideo => 'مراجعة فيديو بمساعدة الذكاء الاصطناعي';
+
+  @override
+  String get weeklyCheckIns => 'متابعة أسبوعية';
+
+  @override
+  String get home => 'الرئيسية';
+
+  @override
+  String get train => 'تمرين';
+
+  @override
+  String get aiHub => 'الذكاء الاصطناعي';
+
+  @override
+  String get communityFeed => 'مجتمع المتدربين';
+
+  @override
+  String get clientActivity => 'نشاط العملاء';
+
+  @override
+  String get time => 'الوقت';
+
+  @override
+  String get dist => 'المسافة';
+
+  @override
+  String get pace => 'السرعة';
+
+  @override
+  String get exerciseSummary => 'ملخص التمرين';
+
+  @override
+  String get personalRecord => 'رقم قياسي شخصي';
+
+  @override
+  String get dashboard => 'اللوحة';
+
+  @override
+  String get clients => 'العملاء';
+
+  @override
+  String get messages => 'الرسائل';
+
+  @override
+  String get clientsTitle => 'العملاء';
+
+  @override
+  String get activeClients => 'العملاء النشطين';
+
+  @override
+  String get thisMonth => '+2 هذا الشهر';
+
+  @override
+  String get pendingReviews => 'مراجعات معلقة';
+
+  @override
+  String get updatesWaiting => 'تحديثات بانتظار المراجعة';
+
+  @override
+  String get searchClients => 'ابحث عن عميل...';
+
+  @override
+  String get needsReview => 'يحتاج مراجعة';
+
+  @override
+  String get inactive => 'غير نشط';
+
+  @override
+  String get latestActivity => 'أحدث نشاط';
+
+  @override
+  String get consistencyHigh => 'عالية';
+
+  @override
+  String get consistencyStable => 'مستقرة';
+
+  @override
+  String get consistencyLow => 'منخفضة';
+
+  @override
+  String get viewLogs => 'عرض السجلات';
+
+  @override
+  String get assignWorkout => 'تعيين تمرين';
+
+  @override
+  String get assignedClient => 'العميل المعين';
+
+  @override
+  String get routines => 'الروتينات';
+
+  @override
+  String get programs => 'البرامج';
+
+  @override
+  String get searchLibrary => 'ابحث في المكتبة...';
+
+  @override
+  String get exercises => 'تمارين';
+
+  @override
+  String get scheduleAssignment => 'جدولة التعيين';
+
+  @override
+  String get assignedDate => 'تاريخ التعيين';
+
+  @override
+  String get assignTo => 'تعيين إلى';
+
+  @override
+  String get assignmentDetail => 'تفاصيل التعيين';
+
+  @override
+  String get status => 'الحالة';
+
+  @override
+  String get inProgress => 'قيد التقدم';
+
+  @override
+  String get coachInstructions => 'تعليمات المدرب';
+
+  @override
+  String get activeRoutine => 'الروتين النشط';
+
+  @override
+  String get estDuration => 'المدة المتوقعة';
+
+  @override
+  String get totalExercises => 'إجمالي التمارين';
+
+  @override
+  String get workoutBreakdown => 'تفاصيل التمرين';
+
+  @override
+  String get shownOf => 'معروض من أصل';
+
+  @override
+  String get reschedule => 'إعادة جدولة';
+
+  @override
+  String get editAssignment => 'تعديل التعيين';
+
+  @override
+  String get sessionReview => 'مراجعة الجلسة';
+
+  @override
+  String get durationLabel => 'المدة';
+
+  @override
+  String get volumeLabel => 'الحجم';
+
+  @override
+  String get avgRpeLabel => 'متوسط الجهد';
+
+  @override
+  String get volumeTrend => 'اتجاه الحجم';
+
+  @override
+  String get vsAvg => 'مقارنة بالمتوسط';
+
+  @override
+  String get performanceLog => 'سجل الأداء';
+
+  @override
+  String get prSetAchieved => 'تم تحقيق رقم قياسي';
+
+  @override
+  String get addSpecificFeedback => 'أضف تعليق مخصص لهذا التمرين...';
+
+  @override
+  String get coachInsights => 'رؤى المدرب';
+
+  @override
+  String get feedbackSummary => 'ملخص الملاحظات';
+
+  @override
+  String get flagAsCriticalReview => 'تحديد كمراجعة هامة';
+
+  @override
+  String get sendToClient => 'إرسال إلى العميل';
+
+  @override
+  String get messageClient => 'مراسلة';
+
+  @override
+  String get suggestAdjustment => 'اقتراح تعديل';
+
+  @override
+  String get k => 'k';
+
+  @override
+  String get session_review => 'مراجعة الجلسة';
+
+  @override
+  String get avg_rpe => 'متوسط الجهد';
+
+  @override
+  String get volume_trend => 'اتجاه الحجم';
+
+  @override
+  String get vs_avg => 'مقابل المتوسط';
+
+  @override
+  String get performance_log => 'سجل الأداء';
+
+  @override
+  String get pr_set_achieved => 'تم تحقيق رقم قياسي';
+
+  @override
+  String get add_specific_feedback => 'أضف ملاحظات محددة لهذا التمرين...';
+
+  @override
+  String get coach_insights => 'رؤى المدرب';
+
+  @override
+  String get feedback_summary => 'ملخص الملاحظات';
+
+  @override
+  String get flag_as_critical => 'تحديد كمراجعة حرجة';
+
+  @override
+  String get send_to_client => 'إرسال إلى المتدرب';
+
+  @override
+  String get message_client => 'رسالة';
+
+  @override
+  String get suggest_adjustment => 'اقتراح تعديل';
+
+  @override
+  String get athlete_chat => 'محادثة المتدرب';
+
+  @override
+  String get type_message => 'اكتب رسالة...';
+
+  @override
+  String get form_check_result => 'نتيجة فحص الأداء';
+
+  @override
+  String get excellent_pathing => 'مسار واستقرار ممتاز.';
+
+  @override
+  String get new_routine_assigned => 'تم تعيين روتين جديد';
+
+  @override
+  String get marcus_chen => 'ماركوس تشين';
+
+  @override
+  String get inviteClients => 'دعوة المتدربين';
+
+  @override
+  String get growthPhase => 'مرحلة النمو';
+
+  @override
+  String get growYourRoster => 'كبّر فريقك.';
+
+  @override
+  String get onboardNewAthletes =>
+      'قم بضم متدربين جدد وإعدادهم بأول برنامج تدريبي لهم في ثوانٍ.';
+
+  @override
+  String get quickShareLink => 'رابط مشاركة سريع';
+
+  @override
+  String get postOnSocial => 'انشر هذا في ملفك الشخصي أو البايو.';
+
+  @override
+  String get copy => 'نسخ';
+
+  @override
+  String get directInvitation => 'دعوة مباشرة';
+
+  @override
+  String get emailOrPhone => 'البريد الإلكتروني أو رقم الهاتف';
+
+  @override
+  String get athleteEmailHint => 'athlete@example.com';
+
+  @override
+  String get initialProgram => 'البرنامج المبدئي';
+
+  @override
+  String get hypertrophy101 => 'تضخيم 101';
+
+  @override
+  String get weeksDays1 => '12 أسبوع • 4 أيام/أسبوع';
+
+  @override
+  String get pureStrength => 'الأساس للقوة الصافية';
+
+  @override
+  String get weeksDays2 => '8 أسابيع • 3 أيام/أسبوع';
+
+  @override
+  String get emptyTemplate => 'قالب فارغ';
+
+  @override
+  String get blankSlate => 'ابدأ من الصفر';
+
+  @override
+  String get whatTheySee => 'ما سيشاهدونه';
+
+  @override
+  String get previewMode => 'وضع المعاينة';
+
+  @override
+  String get welcomeAthlete => 'مرحباً بك في الفريق، أيها البطل.';
+
+  @override
+  String get coachInvitedYou => 'لقد دعاك الكابتن جوردان لبدء تضخيم 101.';
+
+  @override
+  String get sendInvitation => 'إرسال الدعوة';
+
+  @override
+  String get clientReceiveNotification =>
+      'سيتلقى المتدرب إشعاراً ورسالة بريد إلكتروني.';
+
+  @override
+  String get notificationsTitle => 'الإشعارات';
+
+  @override
+  String get filterWorkouts => 'التمارين';
+
+  @override
+  String get filterMessages => 'الرسائل';
+
+  @override
+  String get newWorkoutAssigned => 'تم تعيين تمرين جديد';
+
+  @override
+  String get newWorkoutBody1 => 'أضافت الكابتن سارة ';
+
+  @override
+  String get newWorkoutHighlight => 'Upper Body Power A';
+
+  @override
+  String get newWorkoutBody2 => ' إلى جدولك. استعد لرفع أوزان ثقيلة!';
+
+  @override
+  String get formAnalysisReady => 'تحليل الأداء جاهز';
+
+  @override
+  String get formAnalysisBody =>
+      'تمت مراجعة فيديو الـ Back Squat الخاص بك من الأمس. شاهد 3 نقاط للتحسين.';
+
+  @override
+  String get messageFromCoach => 'رسالة من المدرب';
+
+  @override
+  String get messageBody =>
+      '\"كثافة رائعة في المجموعة الأخيرة من الرفعة الميتة! كيف حال أسفل ظهرك اليوم؟\"';
+
+  @override
+  String get achievementUnlocked => 'تم تحقيق إنجاز';
+
+  @override
+  String get achievementBody1 =>
+      'رقم قياسي جديد! لقد تجاوزت الحد الأقصى السابق لك بمقدار ';
+
+  @override
+  String get achievementHighlight => '5 كجم.';
+
+  @override
+  String get achievementBody2 => '';
+
+  @override
+  String get weeklyPlanUpdated => 'تم تحديث الخطة الأسبوعية';
+
+  @override
+  String get weeklyPlanBody =>
+      'تم تعديل مجموعة التدريب الخاصة بك للأسبوع الرابع بناءً على درجات الاستشفاء الخاصة بك.';
+
+  @override
+  String get proTipBadge => 'نصيحة احترافية';
+
+  @override
+  String get masterRecoveryTitle => 'أتقن الاستشفاء الخاص بك.';
+
+  @override
+  String get masterRecoveryBody =>
+      'قم بمزامنة بيانات نومك للحصول على تعديلات أكثر دقة لشدة التمرين من مدربك.';
+
+  @override
+  String get connectAppleHealth => 'ربط Apple Health';
+
+  @override
+  String get time2mAgo => 'منذ دقيقتين';
+
+  @override
+  String get time1hAgo => 'منذ ساعة';
+
+  @override
+  String get time3hAgo => 'منذ 3 ساعات';
+
+  @override
+  String get time6hAgo => 'منذ 6 ساعات';
+
+  @override
+  String get timeYesterday => 'أمس';
+
+  @override
+  String get workoutsTitle => 'التمارين';
+
+  @override
+  String get coachMarcus => 'كابتن ماركوس';
+
+  @override
+  String get coachQuote =>
+      '\"دعنا نسحق هذا الأسبوع يا أليكس! حجم تدريبك في ذروته، ابق منضبطاً.\"';
+
+  @override
+  String get weeklySchedule => 'الجدول الأسبوعي';
+
+  @override
+  String get week12 => 'الأسبوع 12';
+
+  @override
+  String get todayBadge => 'اليوم';
+
+  @override
+  String get mondayWorkout => 'الإثنين: تضخيم الجزء العلوي';
+
+  @override
+  String get setsReps1 => '4 مجموعات × 8-10 عدات';
+
+  @override
+  String get pullUps => 'عقلة';
+
+  @override
+  String get setsReps2 => '3 مجموعات × حتى الفشل';
+
+  @override
+  String get overheadPress => 'ضغط كتف';
+
+  @override
+  String get setsReps3 => '3 مجموعات × 12 عدة';
+
+  @override
+  String get coachNoteLabel => 'ملاحظة المدرب: ';
+
+  @override
+  String get coachNoteText =>
+      'ركز على مرحلة النزول (3 ثوانٍ) في ضغط البنش اليوم. لا ترفع أوزان للتباهي.';
+
+  @override
+  String get startWorkout => 'ابدأ التمرين';
+
+  @override
+  String get yesterdayBadge => 'أمس';
+
+  @override
+  String get sundayWorkout => 'الأحد: استشفاء نشط';
+
+  @override
+  String get time45m => '45 دقيقة';
+
+  @override
+  String get bpm112 => '112 نبضة بالدقيقة';
+
+  @override
+  String get overdueBadge => 'متأخر';
+
+  @override
+  String get saturdayWorkout => 'السبت: يوم الرجل';
 }

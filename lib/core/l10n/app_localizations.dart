@@ -3467,7 +3467,7 @@ abstract class AppLocalizations {
   /// No description provided for @library.
   ///
   /// In en, this message translates to:
-  /// **'Library'**
+  /// **'LIBRARY'**
   String get library;
 
   /// No description provided for @search_hint.
@@ -3575,7 +3575,7 @@ abstract class AppLocalizations {
   /// No description provided for @view_details.
   ///
   /// In en, this message translates to:
-  /// **'View Details'**
+  /// **'VIEW DETAILS'**
   String get view_details;
 
   /// No description provided for @no_gym_needed.
@@ -4691,7 +4691,7 @@ abstract class AppLocalizations {
   /// No description provided for @sets.
   ///
   /// In en, this message translates to:
-  /// **'SETS'**
+  /// **'sets'**
   String get sets;
 
   /// No description provided for @today.
@@ -4781,7 +4781,7 @@ abstract class AppLocalizations {
   /// No description provided for @onTrack.
   ///
   /// In en, this message translates to:
-  /// **'On Track'**
+  /// **'ON TRACK'**
   String get onTrack;
 
   /// No description provided for @muscleGroupSplit.
@@ -5051,7 +5051,7 @@ abstract class AppLocalizations {
   /// No description provided for @yesterday.
   ///
   /// In en, this message translates to:
-  /// **'Yesterday'**
+  /// **'YESTERDAY'**
   String get yesterday;
 
   /// No description provided for @sinceLastEntry.
@@ -5087,7 +5087,7 @@ abstract class AppLocalizations {
   /// No description provided for @stayConsistent.
   ///
   /// In en, this message translates to:
-  /// **'Stay Consistent'**
+  /// **'Stay consistent & accountable'**
   String get stayConsistent;
 
   /// No description provided for @consistencyMsg.
@@ -5189,7 +5189,7 @@ abstract class AppLocalizations {
   /// No description provided for @reps.
   ///
   /// In en, this message translates to:
-  /// **'REPS'**
+  /// **'reps'**
   String get reps;
 
   /// No description provided for @top5Percent.
@@ -5309,7 +5309,7 @@ abstract class AppLocalizations {
   /// No description provided for @consistency.
   ///
   /// In en, this message translates to:
-  /// **'CONSISTENCY'**
+  /// **'Consistency'**
   String get consistency;
 
   /// No description provided for @dailyStreak.
@@ -6175,6 +6175,1020 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'PROFILE'**
   String get profile;
+
+  /// No description provided for @kineticCoaching.
+  ///
+  /// In en, this message translates to:
+  /// **'Kinetic Coaching'**
+  String get kineticCoaching;
+
+  /// No description provided for @activeChat.
+  ///
+  /// In en, this message translates to:
+  /// **'ACTIVE CHAT'**
+  String get activeChat;
+
+  /// No description provided for @messageYourCoaches.
+  ///
+  /// In en, this message translates to:
+  /// **'Message your coaches'**
+  String get messageYourCoaches;
+
+  /// No description provided for @unreadUpdates.
+  ///
+  /// In en, this message translates to:
+  /// **'2 unread updates from Coach'**
+  String get unreadUpdates;
+
+  /// No description provided for @myCoaches.
+  ///
+  /// In en, this message translates to:
+  /// **'My Coaches'**
+  String get myCoaches;
+
+  /// No description provided for @message.
+  ///
+  /// In en, this message translates to:
+  /// **'MESSAGE'**
+  String get message;
+
+  /// No description provided for @exploreTopCoaches.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore Top Coaches'**
+  String get exploreTopCoaches;
+
+  /// No description provided for @expertGuidance.
+  ///
+  /// In en, this message translates to:
+  /// **'Expert guidance for every goal'**
+  String get expertGuidance;
+
+  /// No description provided for @connect.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect'**
+  String get connect;
+
+  /// No description provided for @signaturePrograms.
+  ///
+  /// In en, this message translates to:
+  /// **'Signature Programs'**
+  String get signaturePrograms;
+
+  /// No description provided for @withCoach.
+  ///
+  /// In en, this message translates to:
+  /// **'With Coach'**
+  String get withCoach;
+
+  /// No description provided for @theKineticEdge.
+  ///
+  /// In en, this message translates to:
+  /// **'The Kinetic Edge'**
+  String get theKineticEdge;
+
+  /// No description provided for @whyWorkWithCertifiedCoach.
+  ///
+  /// In en, this message translates to:
+  /// **'Why work with a certified coach?'**
+  String get whyWorkWithCertifiedCoach;
+
+  /// No description provided for @personalizedPlans.
+  ///
+  /// In en, this message translates to:
+  /// **'Personalized Plans'**
+  String get personalizedPlans;
+
+  /// No description provided for @tailoredToYourBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Tailored to your body type'**
+  String get tailoredToYourBody;
+
+  /// No description provided for @formChecks.
+  ///
+  /// In en, this message translates to:
+  /// **'Form Checks'**
+  String get formChecks;
+
+  /// No description provided for @aiAssistedVideo.
+  ///
+  /// In en, this message translates to:
+  /// **'AI-assisted video review'**
+  String get aiAssistedVideo;
+
+  /// No description provided for @weeklyCheckIns.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Check-ins'**
+  String get weeklyCheckIns;
+
+  /// No description provided for @home.
+  ///
+  /// In en, this message translates to:
+  /// **'HOME'**
+  String get home;
+
+  /// No description provided for @train.
+  ///
+  /// In en, this message translates to:
+  /// **'TRAIN'**
+  String get train;
+
+  /// No description provided for @aiHub.
+  ///
+  /// In en, this message translates to:
+  /// **'AI HUB'**
+  String get aiHub;
+
+  /// No description provided for @communityFeed.
+  ///
+  /// In en, this message translates to:
+  /// **'COMMUNITY FEED'**
+  String get communityFeed;
+
+  /// No description provided for @clientActivity.
+  ///
+  /// In en, this message translates to:
+  /// **'Client Activity'**
+  String get clientActivity;
+
+  /// No description provided for @time.
+  ///
+  /// In en, this message translates to:
+  /// **'TIME'**
+  String get time;
+
+  /// No description provided for @dist.
+  ///
+  /// In en, this message translates to:
+  /// **'DIST'**
+  String get dist;
+
+  /// No description provided for @pace.
+  ///
+  /// In en, this message translates to:
+  /// **'PACE'**
+  String get pace;
+
+  /// No description provided for @exerciseSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'EXERCISE SUMMARY'**
+  String get exerciseSummary;
+
+  /// No description provided for @personalRecord.
+  ///
+  /// In en, this message translates to:
+  /// **'PERSONAL RECORD'**
+  String get personalRecord;
+
+  /// No description provided for @dashboard.
+  ///
+  /// In en, this message translates to:
+  /// **'DASHBOARD'**
+  String get dashboard;
+
+  /// No description provided for @clients.
+  ///
+  /// In en, this message translates to:
+  /// **'CLIENTS'**
+  String get clients;
+
+  /// No description provided for @messages.
+  ///
+  /// In en, this message translates to:
+  /// **'MESSAGES'**
+  String get messages;
+
+  /// No description provided for @clientsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Clients'**
+  String get clientsTitle;
+
+  /// No description provided for @activeClients.
+  ///
+  /// In en, this message translates to:
+  /// **'ACTIVE CLIENTS'**
+  String get activeClients;
+
+  /// No description provided for @thisMonth.
+  ///
+  /// In en, this message translates to:
+  /// **'+2 this month'**
+  String get thisMonth;
+
+  /// No description provided for @pendingReviews.
+  ///
+  /// In en, this message translates to:
+  /// **'PENDING REVIEWS'**
+  String get pendingReviews;
+
+  /// No description provided for @updatesWaiting.
+  ///
+  /// In en, this message translates to:
+  /// **'Updates waiting'**
+  String get updatesWaiting;
+
+  /// No description provided for @searchClients.
+  ///
+  /// In en, this message translates to:
+  /// **'Search clients...'**
+  String get searchClients;
+
+  /// No description provided for @needsReview.
+  ///
+  /// In en, this message translates to:
+  /// **'NEEDS REVIEW'**
+  String get needsReview;
+
+  /// No description provided for @inactive.
+  ///
+  /// In en, this message translates to:
+  /// **'INACTIVE'**
+  String get inactive;
+
+  /// No description provided for @latestActivity.
+  ///
+  /// In en, this message translates to:
+  /// **'LATEST ACTIVITY'**
+  String get latestActivity;
+
+  /// No description provided for @consistencyHigh.
+  ///
+  /// In en, this message translates to:
+  /// **'High'**
+  String get consistencyHigh;
+
+  /// No description provided for @consistencyStable.
+  ///
+  /// In en, this message translates to:
+  /// **'Stable'**
+  String get consistencyStable;
+
+  /// No description provided for @consistencyLow.
+  ///
+  /// In en, this message translates to:
+  /// **'Low'**
+  String get consistencyLow;
+
+  /// No description provided for @viewLogs.
+  ///
+  /// In en, this message translates to:
+  /// **'View Logs'**
+  String get viewLogs;
+
+  /// No description provided for @assignWorkout.
+  ///
+  /// In en, this message translates to:
+  /// **'Assign Workout'**
+  String get assignWorkout;
+
+  /// No description provided for @assignedClient.
+  ///
+  /// In en, this message translates to:
+  /// **'ASSIGNED CLIENT'**
+  String get assignedClient;
+
+  /// No description provided for @routines.
+  ///
+  /// In en, this message translates to:
+  /// **'Routines'**
+  String get routines;
+
+  /// No description provided for @programs.
+  ///
+  /// In en, this message translates to:
+  /// **'PROGRAMS'**
+  String get programs;
+
+  /// No description provided for @searchLibrary.
+  ///
+  /// In en, this message translates to:
+  /// **'Search library...'**
+  String get searchLibrary;
+
+  /// No description provided for @exercises.
+  ///
+  /// In en, this message translates to:
+  /// **'EXERCISES'**
+  String get exercises;
+
+  /// No description provided for @scheduleAssignment.
+  ///
+  /// In en, this message translates to:
+  /// **'SCHEDULE ASSIGNMENT'**
+  String get scheduleAssignment;
+
+  /// No description provided for @assignedDate.
+  ///
+  /// In en, this message translates to:
+  /// **'ASSIGNED DATE'**
+  String get assignedDate;
+
+  /// No description provided for @assignTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Assign to'**
+  String get assignTo;
+
+  /// No description provided for @assignmentDetail.
+  ///
+  /// In en, this message translates to:
+  /// **'Assignment Detail'**
+  String get assignmentDetail;
+
+  /// No description provided for @status.
+  ///
+  /// In en, this message translates to:
+  /// **'STATUS'**
+  String get status;
+
+  /// No description provided for @inProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'IN PROGRESS'**
+  String get inProgress;
+
+  /// No description provided for @coachInstructions.
+  ///
+  /// In en, this message translates to:
+  /// **'COACH\'S INSTRUCTIONS'**
+  String get coachInstructions;
+
+  /// No description provided for @activeRoutine.
+  ///
+  /// In en, this message translates to:
+  /// **'ACTIVE ROUTINE'**
+  String get activeRoutine;
+
+  /// No description provided for @estDuration.
+  ///
+  /// In en, this message translates to:
+  /// **'EST. DURATION'**
+  String get estDuration;
+
+  /// No description provided for @totalExercises.
+  ///
+  /// In en, this message translates to:
+  /// **'TOTAL EXERCISES'**
+  String get totalExercises;
+
+  /// No description provided for @workoutBreakdown.
+  ///
+  /// In en, this message translates to:
+  /// **'WORKOUT BREAKDOWN'**
+  String get workoutBreakdown;
+
+  /// No description provided for @shownOf.
+  ///
+  /// In en, this message translates to:
+  /// **'shown of'**
+  String get shownOf;
+
+  /// No description provided for @reschedule.
+  ///
+  /// In en, this message translates to:
+  /// **'Reschedule'**
+  String get reschedule;
+
+  /// No description provided for @editAssignment.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Assignment'**
+  String get editAssignment;
+
+  /// No description provided for @sessionReview.
+  ///
+  /// In en, this message translates to:
+  /// **'Session Review'**
+  String get sessionReview;
+
+  /// No description provided for @durationLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'DURATION'**
+  String get durationLabel;
+
+  /// No description provided for @volumeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'VOLUME'**
+  String get volumeLabel;
+
+  /// No description provided for @avgRpeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'AVG RPE'**
+  String get avgRpeLabel;
+
+  /// No description provided for @volumeTrend.
+  ///
+  /// In en, this message translates to:
+  /// **'VOLUME TREND'**
+  String get volumeTrend;
+
+  /// No description provided for @vsAvg.
+  ///
+  /// In en, this message translates to:
+  /// **'vs. Avg'**
+  String get vsAvg;
+
+  /// No description provided for @performanceLog.
+  ///
+  /// In en, this message translates to:
+  /// **'Performance Log'**
+  String get performanceLog;
+
+  /// No description provided for @prSetAchieved.
+  ///
+  /// In en, this message translates to:
+  /// **'PR SET ACHIEVED'**
+  String get prSetAchieved;
+
+  /// No description provided for @addSpecificFeedback.
+  ///
+  /// In en, this message translates to:
+  /// **'Add specific feedback for this exercise...'**
+  String get addSpecificFeedback;
+
+  /// No description provided for @coachInsights.
+  ///
+  /// In en, this message translates to:
+  /// **'COACH INSIGHTS'**
+  String get coachInsights;
+
+  /// No description provided for @feedbackSummary.
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback Summary'**
+  String get feedbackSummary;
+
+  /// No description provided for @flagAsCriticalReview.
+  ///
+  /// In en, this message translates to:
+  /// **'Flag as Critical Review'**
+  String get flagAsCriticalReview;
+
+  /// No description provided for @sendToClient.
+  ///
+  /// In en, this message translates to:
+  /// **'Send to Client'**
+  String get sendToClient;
+
+  /// No description provided for @messageClient.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get messageClient;
+
+  /// No description provided for @suggestAdjustment.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest Adjustment'**
+  String get suggestAdjustment;
+
+  /// No description provided for @k.
+  ///
+  /// In en, this message translates to:
+  /// **'k'**
+  String get k;
+
+  /// No description provided for @session_review.
+  ///
+  /// In en, this message translates to:
+  /// **'Session Review'**
+  String get session_review;
+
+  /// No description provided for @avg_rpe.
+  ///
+  /// In en, this message translates to:
+  /// **'AVG RPE'**
+  String get avg_rpe;
+
+  /// No description provided for @volume_trend.
+  ///
+  /// In en, this message translates to:
+  /// **'VOLUME TREND'**
+  String get volume_trend;
+
+  /// No description provided for @vs_avg.
+  ///
+  /// In en, this message translates to:
+  /// **'vs. Avg'**
+  String get vs_avg;
+
+  /// No description provided for @performance_log.
+  ///
+  /// In en, this message translates to:
+  /// **'Performance Log'**
+  String get performance_log;
+
+  /// No description provided for @pr_set_achieved.
+  ///
+  /// In en, this message translates to:
+  /// **'PR SET ACHIEVED'**
+  String get pr_set_achieved;
+
+  /// No description provided for @add_specific_feedback.
+  ///
+  /// In en, this message translates to:
+  /// **'Add specific feedback for this exercise...'**
+  String get add_specific_feedback;
+
+  /// No description provided for @coach_insights.
+  ///
+  /// In en, this message translates to:
+  /// **'COACH INSIGHTS'**
+  String get coach_insights;
+
+  /// No description provided for @feedback_summary.
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback Summary'**
+  String get feedback_summary;
+
+  /// No description provided for @flag_as_critical.
+  ///
+  /// In en, this message translates to:
+  /// **'Flag as Critical Review'**
+  String get flag_as_critical;
+
+  /// No description provided for @send_to_client.
+  ///
+  /// In en, this message translates to:
+  /// **'Send to Client'**
+  String get send_to_client;
+
+  /// No description provided for @message_client.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get message_client;
+
+  /// No description provided for @suggest_adjustment.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest Adjustment'**
+  String get suggest_adjustment;
+
+  /// No description provided for @athlete_chat.
+  ///
+  /// In en, this message translates to:
+  /// **'ATHLETE CHAT'**
+  String get athlete_chat;
+
+  /// No description provided for @type_message.
+  ///
+  /// In en, this message translates to:
+  /// **'Type a message...'**
+  String get type_message;
+
+  /// No description provided for @form_check_result.
+  ///
+  /// In en, this message translates to:
+  /// **'FORM CHECK RESULT'**
+  String get form_check_result;
+
+  /// No description provided for @excellent_pathing.
+  ///
+  /// In en, this message translates to:
+  /// **'Excellent pathing & stability.'**
+  String get excellent_pathing;
+
+  /// No description provided for @new_routine_assigned.
+  ///
+  /// In en, this message translates to:
+  /// **'NEW ROUTINE ASSIGNED'**
+  String get new_routine_assigned;
+
+  /// No description provided for @marcus_chen.
+  ///
+  /// In en, this message translates to:
+  /// **'Marcus Chen'**
+  String get marcus_chen;
+
+  /// No description provided for @inviteClients.
+  ///
+  /// In en, this message translates to:
+  /// **'Invite Clients'**
+  String get inviteClients;
+
+  /// No description provided for @growthPhase.
+  ///
+  /// In en, this message translates to:
+  /// **'GROWTH PHASE'**
+  String get growthPhase;
+
+  /// No description provided for @growYourRoster.
+  ///
+  /// In en, this message translates to:
+  /// **'Grow your roster.'**
+  String get growYourRoster;
+
+  /// No description provided for @onboardNewAthletes.
+  ///
+  /// In en, this message translates to:
+  /// **'Onboard new athletes and set them up with their first training program in seconds.'**
+  String get onboardNewAthletes;
+
+  /// No description provided for @quickShareLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Share Link'**
+  String get quickShareLink;
+
+  /// No description provided for @postOnSocial.
+  ///
+  /// In en, this message translates to:
+  /// **'Post this on your social profile or bio.'**
+  String get postOnSocial;
+
+  /// No description provided for @copy.
+  ///
+  /// In en, this message translates to:
+  /// **'COPY'**
+  String get copy;
+
+  /// No description provided for @directInvitation.
+  ///
+  /// In en, this message translates to:
+  /// **'Direct Invitation'**
+  String get directInvitation;
+
+  /// No description provided for @emailOrPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'EMAIL OR PHONE NUMBER'**
+  String get emailOrPhone;
+
+  /// No description provided for @athleteEmailHint.
+  ///
+  /// In en, this message translates to:
+  /// **'athlete@example.com'**
+  String get athleteEmailHint;
+
+  /// No description provided for @initialProgram.
+  ///
+  /// In en, this message translates to:
+  /// **'Initial Program'**
+  String get initialProgram;
+
+  /// No description provided for @hypertrophy101.
+  ///
+  /// In en, this message translates to:
+  /// **'Hypertrophy 101'**
+  String get hypertrophy101;
+
+  /// No description provided for @weeksDays1.
+  ///
+  /// In en, this message translates to:
+  /// **'12 Weeks • 4 Days/Week'**
+  String get weeksDays1;
+
+  /// No description provided for @pureStrength.
+  ///
+  /// In en, this message translates to:
+  /// **'Pure Strength Baseline'**
+  String get pureStrength;
+
+  /// No description provided for @weeksDays2.
+  ///
+  /// In en, this message translates to:
+  /// **'8 Weeks • 3 Days/Week'**
+  String get weeksDays2;
+
+  /// No description provided for @emptyTemplate.
+  ///
+  /// In en, this message translates to:
+  /// **'Empty Template'**
+  String get emptyTemplate;
+
+  /// No description provided for @blankSlate.
+  ///
+  /// In en, this message translates to:
+  /// **'Start with a blank slate'**
+  String get blankSlate;
+
+  /// No description provided for @whatTheySee.
+  ///
+  /// In en, this message translates to:
+  /// **'What they\'ll see'**
+  String get whatTheySee;
+
+  /// No description provided for @previewMode.
+  ///
+  /// In en, this message translates to:
+  /// **'PREVIEW MODE'**
+  String get previewMode;
+
+  /// No description provided for @welcomeAthlete.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome to the team, Athlete.'**
+  String get welcomeAthlete;
+
+  /// No description provided for @coachInvitedYou.
+  ///
+  /// In en, this message translates to:
+  /// **'Coach Jordan invited you to start Hypertrophy 101.'**
+  String get coachInvitedYou;
+
+  /// No description provided for @sendInvitation.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Invitation'**
+  String get sendInvitation;
+
+  /// No description provided for @clientReceiveNotification.
+  ///
+  /// In en, this message translates to:
+  /// **'CLIENT WILL RECEIVE A PUSH NOTIFICATION AND EMAIL.'**
+  String get clientReceiveNotification;
+
+  /// No description provided for @notificationsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notificationsTitle;
+
+  /// No description provided for @filterWorkouts.
+  ///
+  /// In en, this message translates to:
+  /// **'Workouts'**
+  String get filterWorkouts;
+
+  /// No description provided for @filterMessages.
+  ///
+  /// In en, this message translates to:
+  /// **'Messages'**
+  String get filterMessages;
+
+  /// No description provided for @newWorkoutAssigned.
+  ///
+  /// In en, this message translates to:
+  /// **'New Workout Assigned'**
+  String get newWorkoutAssigned;
+
+  /// No description provided for @newWorkoutBody1.
+  ///
+  /// In en, this message translates to:
+  /// **'Coach Sarah added '**
+  String get newWorkoutBody1;
+
+  /// No description provided for @newWorkoutHighlight.
+  ///
+  /// In en, this message translates to:
+  /// **'Upper Body Power A'**
+  String get newWorkoutHighlight;
+
+  /// No description provided for @newWorkoutBody2.
+  ///
+  /// In en, this message translates to:
+  /// **' to your schedule. Get ready for heavy triples!'**
+  String get newWorkoutBody2;
+
+  /// No description provided for @formAnalysisReady.
+  ///
+  /// In en, this message translates to:
+  /// **'Form Analysis Ready'**
+  String get formAnalysisReady;
+
+  /// No description provided for @formAnalysisBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Back Squat video from yesterday has been reviewed. See 3 points for improvement.'**
+  String get formAnalysisBody;
+
+  /// No description provided for @messageFromCoach.
+  ///
+  /// In en, this message translates to:
+  /// **'Message from Coach'**
+  String get messageFromCoach;
+
+  /// No description provided for @messageBody.
+  ///
+  /// In en, this message translates to:
+  /// **'\"Great intensity on that final set of deadlifts! How\'s the lower back feeling today?\"'**
+  String get messageBody;
+
+  /// No description provided for @achievementUnlocked.
+  ///
+  /// In en, this message translates to:
+  /// **'Achievement Unlocked'**
+  String get achievementUnlocked;
+
+  /// No description provided for @achievementBody1.
+  ///
+  /// In en, this message translates to:
+  /// **'New Personal Best! You\'ve surpassed your previous 1RM by '**
+  String get achievementBody1;
+
+  /// No description provided for @achievementHighlight.
+  ///
+  /// In en, this message translates to:
+  /// **'5kg.'**
+  String get achievementHighlight;
+
+  /// No description provided for @achievementBody2.
+  ///
+  /// In en, this message translates to:
+  /// **''**
+  String get achievementBody2;
+
+  /// No description provided for @weeklyPlanUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Plan Updated'**
+  String get weeklyPlanUpdated;
+
+  /// No description provided for @weeklyPlanBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your training block for Week 4 has been adjusted based on your recovery scores.'**
+  String get weeklyPlanBody;
+
+  /// No description provided for @proTipBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'PRO TIP'**
+  String get proTipBadge;
+
+  /// No description provided for @masterRecoveryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Master your recovery.'**
+  String get masterRecoveryTitle;
+
+  /// No description provided for @masterRecoveryBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Synchronize your sleep data for more accurate workout intensity adjustments from your coach.'**
+  String get masterRecoveryBody;
+
+  /// No description provided for @connectAppleHealth.
+  ///
+  /// In en, this message translates to:
+  /// **'Connect Apple Health'**
+  String get connectAppleHealth;
+
+  /// No description provided for @time2mAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'2m ago'**
+  String get time2mAgo;
+
+  /// No description provided for @time1hAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'1h ago'**
+  String get time1hAgo;
+
+  /// No description provided for @time3hAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'3h ago'**
+  String get time3hAgo;
+
+  /// No description provided for @time6hAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'6h ago'**
+  String get time6hAgo;
+
+  /// No description provided for @timeYesterday.
+  ///
+  /// In en, this message translates to:
+  /// **'Yesterday'**
+  String get timeYesterday;
+
+  /// No description provided for @workoutsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Workouts'**
+  String get workoutsTitle;
+
+  /// No description provided for @coachMarcus.
+  ///
+  /// In en, this message translates to:
+  /// **'COACH MARCUS'**
+  String get coachMarcus;
+
+  /// No description provided for @coachQuote.
+  ///
+  /// In en, this message translates to:
+  /// **'\"Let\'s crush this week, Alex! Your volume is peaking, stay disciplined.\"'**
+  String get coachQuote;
+
+  /// No description provided for @weeklySchedule.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Schedule'**
+  String get weeklySchedule;
+
+  /// No description provided for @week12.
+  ///
+  /// In en, this message translates to:
+  /// **'WEEK 12'**
+  String get week12;
+
+  /// No description provided for @todayBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'TODAY'**
+  String get todayBadge;
+
+  /// No description provided for @mondayWorkout.
+  ///
+  /// In en, this message translates to:
+  /// **'Monday: Hypertrophy Upper'**
+  String get mondayWorkout;
+
+  /// No description provided for @setsReps1.
+  ///
+  /// In en, this message translates to:
+  /// **'4 Sets × 8-10 reps'**
+  String get setsReps1;
+
+  /// No description provided for @pullUps.
+  ///
+  /// In en, this message translates to:
+  /// **'Pull-ups'**
+  String get pullUps;
+
+  /// No description provided for @setsReps2.
+  ///
+  /// In en, this message translates to:
+  /// **'3 Sets × Failure'**
+  String get setsReps2;
+
+  /// No description provided for @overheadPress.
+  ///
+  /// In en, this message translates to:
+  /// **'Overhead Press'**
+  String get overheadPress;
+
+  /// No description provided for @setsReps3.
+  ///
+  /// In en, this message translates to:
+  /// **'3 Sets × 12 reps'**
+  String get setsReps3;
+
+  /// No description provided for @coachNoteLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Coach\'s Note: '**
+  String get coachNoteLabel;
+
+  /// No description provided for @coachNoteText.
+  ///
+  /// In en, this message translates to:
+  /// **'Focus on a 3-second eccentric phase for the bench press today. No ego lifting.'**
+  String get coachNoteText;
+
+  /// No description provided for @startWorkout.
+  ///
+  /// In en, this message translates to:
+  /// **'Start Workout'**
+  String get startWorkout;
+
+  /// No description provided for @yesterdayBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'YESTERDAY'**
+  String get yesterdayBadge;
+
+  /// No description provided for @sundayWorkout.
+  ///
+  /// In en, this message translates to:
+  /// **'Sunday: Active Recovery'**
+  String get sundayWorkout;
+
+  /// No description provided for @time45m.
+  ///
+  /// In en, this message translates to:
+  /// **'45m'**
+  String get time45m;
+
+  /// No description provided for @bpm112.
+  ///
+  /// In en, this message translates to:
+  /// **'112 BPM avg'**
+  String get bpm112;
+
+  /// No description provided for @overdueBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'OVERDUE'**
+  String get overdueBadge;
+
+  /// No description provided for @saturdayWorkout.
+  ///
+  /// In en, this message translates to:
+  /// **'Saturday: Leg Day'**
+  String get saturdayWorkout;
 }
 
 class _AppLocalizationsDelegate

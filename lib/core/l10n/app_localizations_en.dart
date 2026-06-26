@@ -1739,7 +1739,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get hub_kinetic => 'KINETIC';
 
   @override
-  String get library => 'Library';
+  String get library => 'LIBRARY';
 
   @override
   String get search_hint => 'Search programs, coaches, or goals...';
@@ -1793,7 +1793,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get days => 'DAYS';
 
   @override
-  String get view_details => 'View Details';
+  String get view_details => 'VIEW DETAILS';
 
   @override
   String get no_gym_needed => 'NO GYM NEEDED';
@@ -2371,7 +2371,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pro => 'PRO';
 
   @override
-  String get sets => 'SETS';
+  String get sets => 'sets';
 
   @override
   String get today => 'TODAY';
@@ -2416,7 +2416,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get avgPerWeek => 'avg / week';
 
   @override
-  String get onTrack => 'On Track';
+  String get onTrack => 'ON TRACK';
 
   @override
   String get muscleGroupSplit => 'Muscle Group Split';
@@ -2553,7 +2553,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Users who log measurements weekly are 3x more likely to hit their target body composition.';
 
   @override
-  String get yesterday => 'Yesterday';
+  String get yesterday => 'YESTERDAY';
 
   @override
   String get sinceLastEntry => 'since last entry';
@@ -2571,7 +2571,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get viewFullChart => 'VIEW FULL CHART';
 
   @override
-  String get stayConsistent => 'Stay Consistent';
+  String get stayConsistent => 'Stay consistent & accountable';
 
   @override
   String get consistencyMsg =>
@@ -2624,7 +2624,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get currentPeakPerformance => 'CURRENT PEAK PERFORMANCE';
 
   @override
-  String get reps => 'REPS';
+  String get reps => 'reps';
 
   @override
   String get top5Percent => 'Top 5% of your age group';
@@ -2684,7 +2684,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get hoursTrained => 'HOURS TRAINED';
 
   @override
-  String get consistency => 'CONSISTENCY';
+  String get consistency => 'Consistency';
 
   @override
   String get dailyStreak => 'DAILY STREAK:';
@@ -3136,4 +3136,524 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get profile => 'PROFILE';
+
+  @override
+  String get kineticCoaching => 'Kinetic Coaching';
+
+  @override
+  String get activeChat => 'ACTIVE CHAT';
+
+  @override
+  String get messageYourCoaches => 'Message your coaches';
+
+  @override
+  String get unreadUpdates => '2 unread updates from Coach';
+
+  @override
+  String get myCoaches => 'My Coaches';
+
+  @override
+  String get message => 'MESSAGE';
+
+  @override
+  String get exploreTopCoaches => 'Explore Top Coaches';
+
+  @override
+  String get expertGuidance => 'Expert guidance for every goal';
+
+  @override
+  String get connect => 'Connect';
+
+  @override
+  String get signaturePrograms => 'Signature Programs';
+
+  @override
+  String get withCoach => 'With Coach';
+
+  @override
+  String get theKineticEdge => 'The Kinetic Edge';
+
+  @override
+  String get whyWorkWithCertifiedCoach => 'Why work with a certified coach?';
+
+  @override
+  String get personalizedPlans => 'Personalized Plans';
+
+  @override
+  String get tailoredToYourBody => 'Tailored to your body type';
+
+  @override
+  String get formChecks => 'Form Checks';
+
+  @override
+  String get aiAssistedVideo => 'AI-assisted video review';
+
+  @override
+  String get weeklyCheckIns => 'Weekly Check-ins';
+
+  @override
+  String get home => 'HOME';
+
+  @override
+  String get train => 'TRAIN';
+
+  @override
+  String get aiHub => 'AI HUB';
+
+  @override
+  String get communityFeed => 'COMMUNITY FEED';
+
+  @override
+  String get clientActivity => 'Client Activity';
+
+  @override
+  String get time => 'TIME';
+
+  @override
+  String get dist => 'DIST';
+
+  @override
+  String get pace => 'PACE';
+
+  @override
+  String get exerciseSummary => 'EXERCISE SUMMARY';
+
+  @override
+  String get personalRecord => 'PERSONAL RECORD';
+
+  @override
+  String get dashboard => 'DASHBOARD';
+
+  @override
+  String get clients => 'CLIENTS';
+
+  @override
+  String get messages => 'MESSAGES';
+
+  @override
+  String get clientsTitle => 'Clients';
+
+  @override
+  String get activeClients => 'ACTIVE CLIENTS';
+
+  @override
+  String get thisMonth => '+2 this month';
+
+  @override
+  String get pendingReviews => 'PENDING REVIEWS';
+
+  @override
+  String get updatesWaiting => 'Updates waiting';
+
+  @override
+  String get searchClients => 'Search clients...';
+
+  @override
+  String get needsReview => 'NEEDS REVIEW';
+
+  @override
+  String get inactive => 'INACTIVE';
+
+  @override
+  String get latestActivity => 'LATEST ACTIVITY';
+
+  @override
+  String get consistencyHigh => 'High';
+
+  @override
+  String get consistencyStable => 'Stable';
+
+  @override
+  String get consistencyLow => 'Low';
+
+  @override
+  String get viewLogs => 'View Logs';
+
+  @override
+  String get assignWorkout => 'Assign Workout';
+
+  @override
+  String get assignedClient => 'ASSIGNED CLIENT';
+
+  @override
+  String get routines => 'Routines';
+
+  @override
+  String get programs => 'PROGRAMS';
+
+  @override
+  String get searchLibrary => 'Search library...';
+
+  @override
+  String get exercises => 'EXERCISES';
+
+  @override
+  String get scheduleAssignment => 'SCHEDULE ASSIGNMENT';
+
+  @override
+  String get assignedDate => 'ASSIGNED DATE';
+
+  @override
+  String get assignTo => 'Assign to';
+
+  @override
+  String get assignmentDetail => 'Assignment Detail';
+
+  @override
+  String get status => 'STATUS';
+
+  @override
+  String get inProgress => 'IN PROGRESS';
+
+  @override
+  String get coachInstructions => 'COACH\'S INSTRUCTIONS';
+
+  @override
+  String get activeRoutine => 'ACTIVE ROUTINE';
+
+  @override
+  String get estDuration => 'EST. DURATION';
+
+  @override
+  String get totalExercises => 'TOTAL EXERCISES';
+
+  @override
+  String get workoutBreakdown => 'WORKOUT BREAKDOWN';
+
+  @override
+  String get shownOf => 'shown of';
+
+  @override
+  String get reschedule => 'Reschedule';
+
+  @override
+  String get editAssignment => 'Edit Assignment';
+
+  @override
+  String get sessionReview => 'Session Review';
+
+  @override
+  String get durationLabel => 'DURATION';
+
+  @override
+  String get volumeLabel => 'VOLUME';
+
+  @override
+  String get avgRpeLabel => 'AVG RPE';
+
+  @override
+  String get volumeTrend => 'VOLUME TREND';
+
+  @override
+  String get vsAvg => 'vs. Avg';
+
+  @override
+  String get performanceLog => 'Performance Log';
+
+  @override
+  String get prSetAchieved => 'PR SET ACHIEVED';
+
+  @override
+  String get addSpecificFeedback =>
+      'Add specific feedback for this exercise...';
+
+  @override
+  String get coachInsights => 'COACH INSIGHTS';
+
+  @override
+  String get feedbackSummary => 'Feedback Summary';
+
+  @override
+  String get flagAsCriticalReview => 'Flag as Critical Review';
+
+  @override
+  String get sendToClient => 'Send to Client';
+
+  @override
+  String get messageClient => 'Message';
+
+  @override
+  String get suggestAdjustment => 'Suggest Adjustment';
+
+  @override
+  String get k => 'k';
+
+  @override
+  String get session_review => 'Session Review';
+
+  @override
+  String get avg_rpe => 'AVG RPE';
+
+  @override
+  String get volume_trend => 'VOLUME TREND';
+
+  @override
+  String get vs_avg => 'vs. Avg';
+
+  @override
+  String get performance_log => 'Performance Log';
+
+  @override
+  String get pr_set_achieved => 'PR SET ACHIEVED';
+
+  @override
+  String get add_specific_feedback =>
+      'Add specific feedback for this exercise...';
+
+  @override
+  String get coach_insights => 'COACH INSIGHTS';
+
+  @override
+  String get feedback_summary => 'Feedback Summary';
+
+  @override
+  String get flag_as_critical => 'Flag as Critical Review';
+
+  @override
+  String get send_to_client => 'Send to Client';
+
+  @override
+  String get message_client => 'Message';
+
+  @override
+  String get suggest_adjustment => 'Suggest Adjustment';
+
+  @override
+  String get athlete_chat => 'ATHLETE CHAT';
+
+  @override
+  String get type_message => 'Type a message...';
+
+  @override
+  String get form_check_result => 'FORM CHECK RESULT';
+
+  @override
+  String get excellent_pathing => 'Excellent pathing & stability.';
+
+  @override
+  String get new_routine_assigned => 'NEW ROUTINE ASSIGNED';
+
+  @override
+  String get marcus_chen => 'Marcus Chen';
+
+  @override
+  String get inviteClients => 'Invite Clients';
+
+  @override
+  String get growthPhase => 'GROWTH PHASE';
+
+  @override
+  String get growYourRoster => 'Grow your roster.';
+
+  @override
+  String get onboardNewAthletes =>
+      'Onboard new athletes and set them up with their first training program in seconds.';
+
+  @override
+  String get quickShareLink => 'Quick Share Link';
+
+  @override
+  String get postOnSocial => 'Post this on your social profile or bio.';
+
+  @override
+  String get copy => 'COPY';
+
+  @override
+  String get directInvitation => 'Direct Invitation';
+
+  @override
+  String get emailOrPhone => 'EMAIL OR PHONE NUMBER';
+
+  @override
+  String get athleteEmailHint => 'athlete@example.com';
+
+  @override
+  String get initialProgram => 'Initial Program';
+
+  @override
+  String get hypertrophy101 => 'Hypertrophy 101';
+
+  @override
+  String get weeksDays1 => '12 Weeks • 4 Days/Week';
+
+  @override
+  String get pureStrength => 'Pure Strength Baseline';
+
+  @override
+  String get weeksDays2 => '8 Weeks • 3 Days/Week';
+
+  @override
+  String get emptyTemplate => 'Empty Template';
+
+  @override
+  String get blankSlate => 'Start with a blank slate';
+
+  @override
+  String get whatTheySee => 'What they\'ll see';
+
+  @override
+  String get previewMode => 'PREVIEW MODE';
+
+  @override
+  String get welcomeAthlete => 'Welcome to the team, Athlete.';
+
+  @override
+  String get coachInvitedYou =>
+      'Coach Jordan invited you to start Hypertrophy 101.';
+
+  @override
+  String get sendInvitation => 'Send Invitation';
+
+  @override
+  String get clientReceiveNotification =>
+      'CLIENT WILL RECEIVE A PUSH NOTIFICATION AND EMAIL.';
+
+  @override
+  String get notificationsTitle => 'Notifications';
+
+  @override
+  String get filterWorkouts => 'Workouts';
+
+  @override
+  String get filterMessages => 'Messages';
+
+  @override
+  String get newWorkoutAssigned => 'New Workout Assigned';
+
+  @override
+  String get newWorkoutBody1 => 'Coach Sarah added ';
+
+  @override
+  String get newWorkoutHighlight => 'Upper Body Power A';
+
+  @override
+  String get newWorkoutBody2 =>
+      ' to your schedule. Get ready for heavy triples!';
+
+  @override
+  String get formAnalysisReady => 'Form Analysis Ready';
+
+  @override
+  String get formAnalysisBody =>
+      'Your Back Squat video from yesterday has been reviewed. See 3 points for improvement.';
+
+  @override
+  String get messageFromCoach => 'Message from Coach';
+
+  @override
+  String get messageBody =>
+      '\"Great intensity on that final set of deadlifts! How\'s the lower back feeling today?\"';
+
+  @override
+  String get achievementUnlocked => 'Achievement Unlocked';
+
+  @override
+  String get achievementBody1 =>
+      'New Personal Best! You\'ve surpassed your previous 1RM by ';
+
+  @override
+  String get achievementHighlight => '5kg.';
+
+  @override
+  String get achievementBody2 => '';
+
+  @override
+  String get weeklyPlanUpdated => 'Weekly Plan Updated';
+
+  @override
+  String get weeklyPlanBody =>
+      'Your training block for Week 4 has been adjusted based on your recovery scores.';
+
+  @override
+  String get proTipBadge => 'PRO TIP';
+
+  @override
+  String get masterRecoveryTitle => 'Master your recovery.';
+
+  @override
+  String get masterRecoveryBody =>
+      'Synchronize your sleep data for more accurate workout intensity adjustments from your coach.';
+
+  @override
+  String get connectAppleHealth => 'Connect Apple Health';
+
+  @override
+  String get time2mAgo => '2m ago';
+
+  @override
+  String get time1hAgo => '1h ago';
+
+  @override
+  String get time3hAgo => '3h ago';
+
+  @override
+  String get time6hAgo => '6h ago';
+
+  @override
+  String get timeYesterday => 'Yesterday';
+
+  @override
+  String get workoutsTitle => 'Workouts';
+
+  @override
+  String get coachMarcus => 'COACH MARCUS';
+
+  @override
+  String get coachQuote =>
+      '\"Let\'s crush this week, Alex! Your volume is peaking, stay disciplined.\"';
+
+  @override
+  String get weeklySchedule => 'Weekly Schedule';
+
+  @override
+  String get week12 => 'WEEK 12';
+
+  @override
+  String get todayBadge => 'TODAY';
+
+  @override
+  String get mondayWorkout => 'Monday: Hypertrophy Upper';
+
+  @override
+  String get setsReps1 => '4 Sets × 8-10 reps';
+
+  @override
+  String get pullUps => 'Pull-ups';
+
+  @override
+  String get setsReps2 => '3 Sets × Failure';
+
+  @override
+  String get overheadPress => 'Overhead Press';
+
+  @override
+  String get setsReps3 => '3 Sets × 12 reps';
+
+  @override
+  String get coachNoteLabel => 'Coach\'s Note: ';
+
+  @override
+  String get coachNoteText =>
+      'Focus on a 3-second eccentric phase for the bench press today. No ego lifting.';
+
+  @override
+  String get startWorkout => 'Start Workout';
+
+  @override
+  String get yesterdayBadge => 'YESTERDAY';
+
+  @override
+  String get sundayWorkout => 'Sunday: Active Recovery';
+
+  @override
+  String get time45m => '45m';
+
+  @override
+  String get bpm112 => '112 BPM avg';
+
+  @override
+  String get overdueBadge => 'OVERDUE';
+
+  @override
+  String get saturdayWorkout => 'Saturday: Leg Day';
 }
